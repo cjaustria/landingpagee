@@ -1,0 +1,160 @@
+/* GENERAL BODY STYLES */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f4f7f9;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* HEADER STYLES */
+header {
+    background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #04395e;
+    border-bottom: none;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #03588c;
+    line-height: 1.4;
+}
+
+/* MAIN AND ARTICLE STYLES */
+main {
+    max-width: 850px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+article p {
+    margin-bottom: 1.8rem;
+    text-align: justify;
+    font-size: 1.12rem;
+}
+
+.dropcap:first-letter {
+    font-size: 3.5rem;
+    float: left;
+    line-height: 1;
+    margin-right: 0.15em;
+    font-weight: 700;
+    color: #03588c;
+}
+
+/* BLOCKQUOTE STYLES */
+blockquote {
+    font-style: italic;
+    color: #02577a;
+    border-left: 5px solid #0288a6;
+    background-color: rgba(2, 136, 166, 0.08);
+    padding-left: 1rem;
+    margin: 2.5rem 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* LIST STYLES */
+article ul {
+    margin: 2rem 0 2.5rem 1.8rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+article ul li {
+    font-size: 1.08rem;
+    margin-bottom: 0.7rem;
+    color: #04395e;
+}
+
+article ul li::marker {
+    color: #0288a6;
+}
+
+/* BLUE HIGHLIGHT FOR IMPORTANT SENTENCES */
+.highlight {
+    color: #0288a6;
+}
+
+/* CONCLUSION STYLE (subtle highlight, consistent for all blogs) */
+.conclusion {
+    font-style: italic;
+    margin: 2rem 0;
+}
+
+/* BACK TO HOME BUTTON */
+.back-home {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.back-home a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0288a6;
+    border: 2px solid #0288a6;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.back-home a:hover {
+    background-color: #0288a6;
+    color: white;
+}
+
+/* FOOTER STYLES */
+footer {
+    background-color: #03588c;
+    color: #e0f7fa;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-style: italic;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* FONT FAMILY OVERRIDES */
+h1, blockquote {
+    font-family: 'Playfair Display', serif;
+}
+
+p, .subtitle, li {
+    font-family: 'Georgia', serif;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    article p {
+        font-size: 1rem;
+    }
+
+    blockquote {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+        font-size: 0.9rem;
+    }
+}
