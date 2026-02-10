@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Austria Literature – Landing Page</title>
-    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="landing/landing.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
+<header class="sticky-header">
     <div class="header-left">
         <h1>Austria Literature</h1>
         <p class="subtitle">Stories, reflections, and leadership insights.</p>
@@ -16,7 +16,7 @@
     <nav class="header-right">
         <a href="#about">Project</a>
         <a href="#interesting">Profile</a>
-        <a href="bio.html">Bio</a>
+        <a href="bio/bio.html">Bio</a>
         <a href="#blogs">Blogs</a>
     </nav>
 </header>
@@ -29,7 +29,7 @@
             “Leadership is not about being in front of others, but about walking with them.”
         </blockquote>
     </div>
-    <img src="pic.png" alt="Christian Josef Austria">
+    <img src="images/intropic.jpg" alt="Christian Josef Austria">
 </section>
 
 <section class="intro">
@@ -48,7 +48,7 @@
             This website is a 2026 personal academic project that explores leadership,
             emotional intelligence, and career vision in the tech field. The blogs reflect my personal
             experiences, lessons from literature, and insights from fictional and real-life leaders.
-            You can read my full story in my <a href="bio.html">biography</a>.
+            You can read my full story in my <a href="bio/bio.html">biography</a>.
         </p>
     </section>
 
@@ -95,19 +95,19 @@
         <div class="blog-card">
             <h3>From Diskarte to Dependency</h3>
             <p>Leadership, soft skills, and career vision for tech professionals.</p>
-            <a href="blog1.html">Read Blog →</a>
+            <a href="blogs/blog1.html">Read Blog →</a>
         </div>
 
         <div class="blog-card">
             <h3>The Way of Machiavelli</h3>
             <p>Leadership, strategy, and insights from a lifelong student leader.</p>
-            <a href="blog2.html">Read Blog →</a>
+            <a href="blogs/blog2.html">Read Blog →</a>
         </div>
 
         <div class="blog-card">
             <h3>The Man Who Sits with Everybody</h3>
             <p>A reflection on leadership, connection, and soft skills in tech.</p>
-            <a href="blog3.html">Read Blog →</a>
+            <a href="blogs/blog3.html">Read Blog →</a>
         </div>
     </section>
 </main>
@@ -115,6 +115,21 @@
 <footer>
     <p>&copy; 2026 Austria Literature</p>
 </footer>
+
+<script>
+  // Smooth scroll to titles (fix anchor offset due to sticky header)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          const offset = 80; // adjust based on header height
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elemRect = target.getBoundingClientRect().top;
+          const scrollPos = elemRect - bodyRect - offset;
+          window.scrollTo({ top: scrollPos, behavior: 'smooth' });
+      });
+  });
+</script>
 
 </body>
 </html>
