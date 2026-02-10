@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Man Who Sits with Everybody</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>The Man Who Sits with Everybody</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <div class="header-container">
-        <h1>The Man Who Sits with Everybody</h1>
-        <p class="subtitle">Leadership, soft skills, and career vision for tech professionals.</p>
-    </div>
+  <h1>The Man Who Sits with Everybody</h1>
+  <p class="subtitle">Leadership, soft skills, and career vision for tech professionals.</p>
 </header>
 
 <main>
-    <article>
+  <nav class="blog-nav">
+    <button onclick="scrollToSection('intro')">Intro</button>
+    <button onclick="scrollToSection('body')">Body</button>
+    <button onclick="scrollToSection('conclusion')">Conclusion</button>
+  </nav>
 
-        <blockquote>
-            “People don’t buy what you do, they buy why you do it.”<br>
-            Simon Sinek
-        </blockquote>
+  <article>
+    <section id="intro">
+      <blockquote>
+        “People don’t buy what you do, they buy why you do it.”<br>
+        Simon Sinek
+      </blockquote>
 
-        <p class="dropcap">
-            Have you ever wondered why some people naturally inspire others, even when others have more technical skill or experience? Soft skills are often overlooked in tech. Most people focus on hard skills. Para sa akin, leadership is about connection. <span class="highlight">The mediocre person with strong soft skills often has more leverage than the genius who doesn’t talk to anybody.</span>
-        </p>
+      <p class="dropcap">
+        Have you ever wondered why some people naturally inspire others, even when others have more technical skill or experience? Soft skills are often overlooked in tech. Most people focus on hard skills. Para sa akin, leadership is about connection. Minsan, kahit gaano ka kagaling, walang mangyayari kung hindi ka marunong makipag-ugnayan. 
+        <span class="highlight">The mediocre person with strong soft skills often has more leverage than the genius who doesn’t talk to anybody.</span>
+      </p>
+    </section>
 
-        <p>
-            I’ve always been inspired by fictional leaders: 
-            <strong>Aragorn</strong>, <strong>Optimus Prime</strong>, <strong>Batman</strong>. Leadership is about presence, influence, and understanding people.
-        </p>
+    <section id="body">
+      <p>
+        I’ve always been inspired by fictional leaders: <strong>Aragorn</strong>, <strong>Optimus Prime</strong>, <strong>Batman</strong>. Leadership is not about authority alone—it’s about presence, influence, and understanding people.
+      </p>
 
-        <ul>
-          <li><b>Business Analyst:</b> Learning processes and stakeholders.</li>
-          <li><b>Project Manager:</b> Coordinating projects and teams.</li>
-          <li><b>Director:</b> Guiding strategy and mentoring emerging leaders.</li>
-          <li><b>CEO / Startup Founder:</b> Building vision, taking calculated risks, and leading teams.</li>
-        </ul>
+      <p>
+        Books like <strong>Leaders Eat Last</strong>, <strong>Atomic Habits</strong>, and <strong>The 7 Habits of Highly Effective People</strong> taught me that habits, purpose, and people-first leadership build long-term impact.
+        <span class="highlight">This illustrates the Kaizen principle—small, consistent improvements lead to massive change over time.</span>
+      </p>
 
+      <p>
+        The title <strong>The Man Who Sits with Everybody</strong> reflects my philosophy: a true leader does not isolate themselves at the top but sits among the team, listens, and understands.
+      </p>
+    </section>
+
+    <section id="conclusion">
+      <div class="conclusion-box">
         <p class="conclusion">
-            In conclusion, I seek leadership because it challenges and transforms. <strong>Technical skills open doors, but connection and soft skills sustain the journey.</strong>
+          In conclusion, I seek leadership because it challenges and transforms. <strong>Technical skills open doors, but connection and soft skills sustain the journey.</strong> My vision: to learn, to lead, to build influence, and eventually guide teams and organizations with empathy, strategy, and purpose.
         </p>
+      </div>
+    </section>
 
-        <div class="back-home">
-            <a href="../index.html">← Back to Home</a>
-        </div>
-
-    </article>
+    <div class="back-home">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </article>
 </main>
 
 <footer>
-    <p>&copy; 2026 Austria Literature</p>
+  <p>&copy; 2026 Austria Literature</p>
 </footer>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
 
 </body>
 </html>
