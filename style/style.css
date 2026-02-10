@@ -1,6 +1,4 @@
-/* =====================
-   GENERAL BODY STYLES
-===================== */
+/* GENERAL BODY STYLES */
 body {
     font-family: 'Georgia', serif;
     background-color: #f4f7f9;
@@ -10,19 +8,7 @@ body {
     line-height: 1.8;
 }
 
-a {
-    color: #0288a6;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #03588c;
-}
-
-/* =====================
-   HEADER STYLES
-===================== */
+/* HEADER STYLES */
 header {
     background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
     padding: 4rem 1.5rem 3rem;
@@ -47,9 +33,7 @@ header .subtitle {
     line-height: 1.4;
 }
 
-/* =====================
-   MAIN AND ARTICLE STYLES
-===================== */
+/* MAIN AND ARTICLE STYLES */
 main {
     max-width: 850px;
     margin: 3rem auto;
@@ -71,6 +55,7 @@ article p {
     color: #03588c;
 }
 
+/* BLOCKQUOTE STYLES */
 blockquote {
     font-style: italic;
     color: #02577a;
@@ -83,6 +68,7 @@ blockquote {
     line-height: 1.6;
 }
 
+/* LIST STYLES */
 article ul {
     margin: 2rem 0 2.5rem 1.8rem;
     padding-left: 1.5rem;
@@ -99,8 +85,15 @@ article ul li::marker {
     color: #0288a6;
 }
 
+/* BLUE HIGHLIGHT FOR IMPORTANT SENTENCES */
 .highlight {
     color: #0288a6;
+}
+
+/* CONCLUSION STYLE (subtle highlight, consistent for all blogs) */
+.conclusion {
+    font-style: italic;
+    margin: 2rem 0;
 }
 
 /* =====================
@@ -143,9 +136,7 @@ article ul li::marker {
     box-shadow: 0 6px 12px rgba(0,0,0,0.08);
 }
 
-/* =====================
-   BACK TO HOME BUTTON
-===================== */
+/* BACK TO HOME BUTTON */
 .back-home {
     text-align: center;
     margin: 3rem 0;
@@ -158,7 +149,7 @@ article ul li::marker {
     border: 2px solid #0288a6;
     padding: 0.6rem 1.5rem;
     border-radius: 25px;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .back-home a:hover {
@@ -166,9 +157,7 @@ article ul li::marker {
     color: white;
 }
 
-/* =====================
-   FOOTER STYLES
-===================== */
+/* FOOTER STYLES */
 footer {
     background-color: #03588c;
     color: #e0f7fa;
@@ -181,9 +170,7 @@ footer p {
     margin: 0;
 }
 
-/* =====================
-   FONT FAMILY OVERRIDES
-===================== */
+/* FONT FAMILY OVERRIDES */
 h1, blockquote {
     font-family: 'Playfair Display', serif;
 }
@@ -192,9 +179,7 @@ p, .subtitle, li {
     font-family: 'Georgia', serif;
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
+/* RESPONSIVE STYLES */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -217,11 +202,4 @@ p, .subtitle, li {
         margin: 0.3rem 0.2rem;
         padding: 0.45rem 1rem;
     }
-}
-
-/* =====================
-   SMOOTH SCROLL
-===================== */
-html {
-    scroll-behavior: smooth;
 }
