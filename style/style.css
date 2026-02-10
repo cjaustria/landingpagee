@@ -38,27 +38,31 @@ header .subtitle {
 }
 
 /* =======================
-   SCROLL NAVIGATION BAR
+   SCROLL NAVIGATION BAR (Blogs & Bio & Gallery)
 ======================= */
 .scroll-nav {
     text-align: center;
-    margin-top: 1rem;
+    background-color: #a0d8f8;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #0288a6;
 }
 
 .scroll-nav a {
     text-decoration: none;
-    font-weight: bold;
-    color: #0288a6;
-    border: 2px solid #0288a6;
+    font-weight: 600;
+    color: #04395e;
+    margin: 0 1.2rem;
     padding: 0.5rem 1rem;
-    border-radius: 25px;
-    margin: 0 0.8rem;
+    border-radius: 20px;
     transition: 0.3s ease;
 }
 
 .scroll-nav a:hover {
     background-color: #0288a6;
-    color: white;
+    color: #fff;
 }
 
 /* =======================
@@ -120,28 +124,18 @@ article ul li::marker {
 }
 
 /* =======================
-   BLUE HIGHLIGHT FOR IMPORTANT SENTENCES
+   BLUE HIGHLIGHT
 ======================= */
 .highlight {
     color: #0288a6;
 }
 
 /* =======================
-   CONCLUSION STYLES
+   CONCLUSION
 ======================= */
 .conclusion {
     font-style: italic;
     margin: 2rem 0;
-}
-
-.conclusion-box {
-    background-color: rgba(2, 136, 166, 0.1);
-    border-left: 5px solid #0288a6;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-    font-size: 1.14rem;
-    line-height: 1.6;
 }
 
 /* =======================
@@ -194,72 +188,6 @@ p, .subtitle, li {
 }
 
 /* =======================
-   BIO IMAGE SECTION
-======================= */
-.bio-section {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    margin: 2.5rem 0;
-    flex-wrap: wrap;
-}
-
-.bio-photo {
-    width: 220px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-}
-
-.bio-photo:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-.bio-photo.left { order: 1; }
-.bio-photo.right { order: 2; }
-
-.bio-section p {
-    flex: 1;
-    font-size: 1.12rem;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-/* =======================
-   GALLERY SECTION
-======================= */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-.gallery a {
-    flex: 1 0 180px;
-    max-width: 220px;
-    display: block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-    object-fit: cover;
-}
-
-.gallery a:hover img {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-    cursor: pointer;
-}
-
-/* =======================
    RESPONSIVE STYLES
 ======================= */
 @media (max-width: 768px) {
@@ -267,7 +195,7 @@ p, .subtitle, li {
         font-size: 2rem;
     }
 
-    article p, .bio-section p {
+    article p {
         font-size: 1rem;
     }
 
@@ -281,27 +209,54 @@ p, .subtitle, li {
     }
 
     .scroll-nav a {
-        margin: 0.4rem 0.6rem;
+        margin: 0 0.5rem;
         padding: 0.4rem 0.8rem;
         font-size: 0.95rem;
     }
+}
 
-    .bio-section {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
+/* =======================
+   GALLERY PAGE STYLES (ONLY ADDITION)
+======================= */
 
-    .bio-photo {
-        width: 100%;
-        max-width: 100%;
-    }
+.gallery-section {
+    margin: 3rem 0;
+}
 
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
+.gallery-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #04395e;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
 
-    .gallery a {
-        max-width: 90%;
-    }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 22px rgba(0,0,0,0.25);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
 }
