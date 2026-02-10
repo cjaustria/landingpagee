@@ -1,44 +1,48 @@
 /* =====================
-   GENERAL STYLING
+   GENERAL BODY STYLING
 ===================== */
 body {
-    font-family: 'Playfair Display', serif;
-    line-height: 1.6;
+    font-family: 'Georgia', serif;
+    background-color: #f4f7f9;
+    color: #1a1a1a;
     margin: 0;
     padding: 0;
-    color: #222;
-    background-color: #fdfdfd;
+    line-height: 1.8;
 }
 
 a {
-    color: #0077cc;
+    color: #0288a6;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #005999;
+    color: #03588c;
 }
 
+/* =====================
+   HEADER STYLING
+===================== */
 header {
     text-align: center;
     padding: 2rem 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 header h1 {
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
 }
 
 header .subtitle {
     font-size: 1.2rem;
-    color: #555;
+    color: #03588c;
 }
 
 /* =====================
-   SCROLL NAV BUTTONS
+   SCROLL BUTTON NAV (Intro / Body / Conclusion)
 ===================== */
 .scroll-nav {
     text-align: center;
@@ -49,37 +53,37 @@ header .subtitle {
     display: inline-block;
     margin: 0 0.5rem;
     padding: 0.6rem 1.2rem;
-    background: linear-gradient(135deg, #0077cc, #00aaff);
+    background: linear-gradient(135deg, #0288a6, #03a9f4);
     color: #fff;
     font-weight: bold;
-    border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
 
 .scroll-nav a:hover {
-    background: linear-gradient(135deg, #005999, #0088cc);
+    background: linear-gradient(135deg, #03588c, #0288a6);
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 /* =====================
-   ARTICLE CONTENT
+   ARTICLE STYLING
 ===================== */
 article {
     max-width: 900px;
-    margin: 0 auto 3rem auto;
-    padding: 1rem 1rem 3rem 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin: 2rem auto 3rem auto;
+    padding: 2rem;
+    background-color: #e0f7fa;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 article h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
+    color: #03588c;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: #222;
 }
 
 article p {
@@ -91,8 +95,8 @@ article blockquote {
     font-style: italic;
     margin: 1.5rem 0;
     padding-left: 1rem;
-    border-left: 4px solid #0077cc;
-    color: #444;
+    border-left: 4px solid #0288a6;
+    color: #03588c;
 }
 
 article .dropcap:first-letter {
@@ -101,7 +105,7 @@ article .dropcap:first-letter {
     line-height: 1;
     padding-right: 0.1rem;
     font-weight: bold;
-    color: #0077cc;
+    color: #0288a6;
 }
 
 article .highlight {
@@ -112,7 +116,6 @@ article .highlight {
 
 ul {
     margin-left: 1.5rem;
-    margin-bottom: 1rem;
 }
 
 ul li {
@@ -123,14 +126,14 @@ ul li {
    CONCLUSION BOX
 ===================== */
 .conclusion-box {
-    border: 2px solid #0077cc;
-    background-color: #e6f0fa;
-    border-radius: 10px;
-    padding: 1.2rem 1.5rem;
+    border: 2px solid #0288a6;
+    background-color: #d0f0fd;
+    border-radius: 12px;
+    padding: 1.5rem 1.8rem;
     margin-top: 2rem;
     font-weight: bold;
-    color: #003366;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    color: #03588c;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
 }
 
 /* =====================
@@ -142,16 +145,16 @@ ul li {
 }
 
 .back-home a {
-    padding: 0.5rem 1rem;
-    background-color: #0077cc;
+    padding: 0.6rem 1.4rem;
+    background-color: #0288a6;
     color: #fff;
-    border-radius: 20px;
+    border-radius: 25px;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
 .back-home a:hover {
-    background-color: #005999;
+    background-color: #03588c;
     transform: translateY(-2px);
 }
 
@@ -159,62 +162,45 @@ ul li {
    BLOG CARDS / INTERESTING GRID
 ===================== */
 .blog-card, .interesting-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 1rem 1.2rem;
-    margin: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background-color: #d0f0fd;
+    border: 2px solid #0288a6;
+    border-radius: 12px;
+    padding: 1.5rem 1.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
 }
 
 .blog-card:hover, .interesting-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.12);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background-color: #03a9f4;
+    color: white;
 }
 
 /* =====================
-   SMOOTH SCROLL FOR BUTTONS
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+    article {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .scroll-nav a {
+        margin: 0.3rem 0.2rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* =====================
+   SMOOTH SCROLL
 ===================== */
 html {
     scroll-behavior: smooth;
-}
-
-/* =====================
-   HERO IMAGE AND INTRO
-===================== */
-.hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    gap: 2rem;
-    background-color: #e0f7fa;
-    margin-bottom: 2rem;
-    border-radius: 10px;
-}
-
-.hero img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.hero h2 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-.hero p.role {
-    font-size: 1.1rem;
-    color: #03588c;
-}
-
-.hero blockquote {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-top: 1rem;
-    color: #02577a;
 }
