@@ -38,29 +38,29 @@ header .subtitle {
 }
 
 /* =====================
-   SCROLL BUTTONS NAV
+   SCROLL NAV BUTTONS
 ===================== */
 .scroll-nav {
     text-align: center;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
 }
 
 .scroll-nav a {
     display: inline-block;
     margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #0077cc;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, #0077cc, #00aaff);
     color: #fff;
     font-weight: bold;
-    border-radius: 25px;
-    transition: all 0.3s ease;
+    border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 .scroll-nav a:hover {
-    background-color: #005999;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #005999, #0088cc);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 /* =====================
@@ -126,7 +126,7 @@ ul li {
     border: 2px solid #0077cc;
     background-color: #e6f0fa;
     border-radius: 10px;
-    padding: 1rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     margin-top: 2rem;
     font-weight: bold;
     color: #003366;
@@ -153,17 +153,6 @@ ul li {
 .back-home a:hover {
     background-color: #005999;
     transform: translateY(-2px);
-}
-
-/* =====================
-   FOOTER
-===================== */
-footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    background-color: #f5f5f5;
-    font-size: 0.9rem;
-    color: #555;
 }
 
 /* =====================
