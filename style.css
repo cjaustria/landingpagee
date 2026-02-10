@@ -55,6 +55,14 @@ article p {
     color: #03588c;
 }
 
+/* SECTION HEADINGS (for bio sections) */
+section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #03588c;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
 /* BLOCKQUOTE STYLES */
 blockquote {
     font-style: italic;
@@ -90,7 +98,7 @@ article ul li::marker {
     color: #0288a6;
 }
 
-/* CONCLUSION STYLE (subtle highlight, consistent for all blogs) */
+/* CONCLUSION STYLE */
 .conclusion {
     font-style: italic;
     margin: 2rem 0;
