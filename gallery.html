@@ -11,15 +11,25 @@
 
 <header>
     <h1>Photo Gallery</h1>
-    <p class="subtitle">A summary of images used in the site</p>
+    <p class="subtitle">Summary of all images used in Landing Page, Biography, and Blogs</p>
 </header>
 
+<!-- Top Navigation (consistent with blogs) -->
+<nav class="scroll-nav">
+    <a href="index.html">Landing Page</a>
+    <a href="bio/bio.html">Biography</a>
+    <a href="index.html#blogs">Blogs</a>
+</nav>
+
 <main>
+
     <!-- Landing Page Photos -->
     <section>
         <h2>Landing Page Photos</h2>
         <div class="gallery-section">
-            <img src="images/intropic.jpg" alt="Landing Page" class="gallery-photo" onclick="window.open(this.src,'_self')">
+            <a href="images/intropic.jpg" target="_self">
+                <img src="images/intropic.jpg" alt="Landing Page" class="gallery-photo">
+            </a>
         </div>
     </section>
 
@@ -27,9 +37,15 @@
     <section>
         <h2>Biography Photos</h2>
         <div class="gallery-section">
-            <img src="images/childhood.jpg" alt="Childhood" class="gallery-photo" onclick="window.open(this.src,'_self')">
-            <img src="images/teenage.jpg" alt="Teenage" class="gallery-photo" onclick="window.open(this.src,'_self')">
-            <img src="images/college.jpg" alt="College" class="gallery-photo" onclick="window.open(this.src,'_self')">
+            <a href="images/childhood.jpg" target="_self">
+                <img src="images/childhood.jpg" alt="Childhood" class="gallery-photo">
+            </a>
+            <a href="images/teenage.jpg" target="_self">
+                <img src="images/teenage.jpg" alt="Teenage" class="gallery-photo">
+            </a>
+            <a href="images/college.jpg" target="_self">
+                <img src="images/college.jpg" alt="College" class="gallery-photo">
+            </a>
         </div>
     </section>
 
@@ -37,17 +53,29 @@
     <section>
         <h2>Blog Photos</h2>
         <div class="gallery-section">
-            <img src="images/aibrain.jpg" alt="From Diskarte to Dependency" class="gallery-photo" onclick="window.open(this.src,'_self')">
-            <img src="images/machia.jpg" alt="The Way of Machiavelli" class="gallery-photo" onclick="window.open(this.src,'_self')">
-            <img src="images/eatlast.jpg" alt="The Man Who Sits with Everybody" class="gallery-photo" onclick="window.open(this.src,'_self')">
-            <img src="images/atomic.jpg" alt="The Man Who Sits with Everybody" class="gallery-photo" onclick="window.open(this.src,'_self')">
-            <img src="images/highly.jpg" alt="The Man Who Sits with Everybody" class="gallery-photo" onclick="window.open(this.src,'_self')">
+            <a href="images/aibrain.jpg" target="_self">
+                <img src="images/aibrain.jpg" alt="From Diskarte to Dependency" class="gallery-photo">
+            </a>
+            <a href="images/machia.jpg" target="_self">
+                <img src="images/machia.jpg" alt="The Way of Machiavelli" class="gallery-photo">
+            </a>
+            <a href="images/eatlast.jpg" target="_self">
+                <img src="images/eatlast.jpg" alt="The Man Who Sits with Everybody" class="gallery-photo">
+            </a>
+            <a href="images/atomic.jpg" target="_self">
+                <img src="images/atomic.jpg" alt="The Man Who Sits with Everybody" class="gallery-photo">
+            </a>
+            <a href="images/highly.jpg" target="_self">
+                <img src="images/highly.jpg" alt="The Man Who Sits with Everybody" class="gallery-photo">
+            </a>
         </div>
     </section>
 
+    <!-- Back to Home Button -->
     <div class="back-home">
         <a href="index.html">← Back to Home</a>
     </div>
+
 </main>
 
 <footer>
