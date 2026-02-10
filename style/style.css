@@ -38,6 +38,42 @@ header .subtitle {
 }
 
 /* =======================
+   SCROLL NAVIGATION BAR
+======================= */
+.scroll-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    background: white;
+    padding: 0.9rem 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.scroll-nav a {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: #03588c;
+    padding: 0.4rem 1.1rem;
+    border-radius: 20px;
+    border: 1.5px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.scroll-nav a:hover {
+    border: 1.5px solid #0288a6;
+    background-color: rgba(2,136,166,0.08);
+}
+
+.scroll-nav a:active {
+    background-color: #0288a6;
+    color: white;
+}
+
+/* =======================
    MAIN AND ARTICLE STYLES
 ======================= */
 main {
@@ -110,6 +146,14 @@ article ul li::marker {
     margin: 2rem 0;
 }
 
+.conclusion-box {
+    background: rgba(2,136,166,0.08);
+    padding: 1.2rem 1.5rem;
+    border-left: 5px solid #0288a6;
+    border-radius: 8px;
+    font-style: italic;
+}
+
 /* =======================
    BACK TO HOME BUTTON
 ======================= */
@@ -160,7 +204,7 @@ p, .subtitle, li {
 }
 
 /* =======================
-   BIO PHOTO LAYOUT (FIXED & AESTHETIC)
+   BIO PHOTO LAYOUT
 ======================= */
 .bio-section {
     margin: 3rem 0;
@@ -180,7 +224,6 @@ p, .subtitle, li {
     box-shadow: 0 10px 24px rgba(0,0,0,0.28);
 }
 
-/* Google Docs-style text wrap */
 .bio-photo.left {
     float: left;
 }
@@ -190,13 +233,12 @@ p, .subtitle, li {
     margin: 0 0 1rem 1.5rem;
 }
 
-/* Clear floats between sections */
 .bio-clear {
     clear: both;
 }
 
 /* =======================
-   GALLERY (SCOPED – WON'T AFFECT BLOG/BIO)
+   GALLERY
 ======================= */
 .gallery-section {
     margin-bottom: 3rem;
@@ -253,5 +295,10 @@ p, .subtitle, li {
         width: 100%;
         float: none;
         margin: 0 0 1.5rem 0;
+    }
+
+    .scroll-nav {
+        flex-wrap: wrap;
+        gap: 0.6rem;
     }
 }
