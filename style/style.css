@@ -225,3 +225,100 @@ p, .subtitle, li {
         font-size: 0.95rem;
     }
 }
+
+/* =======================
+   BIO SECTION STYLING
+======================= */
+.bio-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2.5rem 0;
+  flex-wrap: wrap; /* responsive wrapping */
+}
+
+.bio-photo {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.bio-photo:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Image alignment for aesthetic flow */
+.bio-photo.left {
+  order: 1; /* image first */
+}
+.bio-photo.right {
+  order: 2; /* image after text in flex-wrap */
+}
+
+.bio-section p {
+  flex: 1;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Scroll Navigation Styling (like blog pages) */
+.scroll-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.scroll-nav a {
+  text-decoration: none;
+  color: #0288a6;
+  font-weight: bold;
+  border: 2px solid #0288a6;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.scroll-nav a:hover {
+  background-color: #0288a6;
+  color: white;
+}
+
+/* Back Home Button */
+.back-home {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.back-home a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0288a6;
+  border: 2px solid #0288a6;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.back-home a:hover {
+  background-color: #0288a6;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bio-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .bio-photo {
+    width: 100%;
+    max-width: 100%;
+  }
+}
