@@ -2,28 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>From Diskarte to Dependency</title>
-  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="style/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1>From Diskarte to Dependency</h1>
-    <span class="subtitle">How AI Rewires Critical Thinking</span>
-  </header>
+<header>
+  <h1>From Diskarte to Dependency</h1>
+  <span class="subtitle">How AI Rewires Critical Thinking</span>
+</header>
 
-  <main>
-    <article>
+<main>
+  <nav class="blog-nav">
+    <button onclick="scrollToSection('intro')">Intro</button>
+    <button onclick="scrollToSection('body')">Body</button>
+    <button onclick="scrollToSection('conclusion')">Conclusion</button>
+  </nav>
 
+  <article>
+    <section id="intro">
       <p>
         <q>AI will not replace us, it will amplify us</q>, according to
         <cite>Pedro Domingos</cite>. This highlights an ongoing debate about whether
         <strong>artificial intelligence</strong> enhances human capability or weakens
         <em>independent thought</em> in modern society.
       </p>
-
       <p>
         Artificial intelligence tools are now embedded in global industries such as
         <strong>healthcare</strong>, <strong>finance</strong>, and <strong>education</strong>.
@@ -31,7 +35,9 @@
         online learning platforms, and automated customer service systems, reshaping
         how people approach decision making.
       </p>
+    </section>
 
+    <section id="body">
       <blockquote>
         Technology becomes a problem when convenience replaces critical engagement.
       </blockquote>
@@ -55,25 +61,35 @@
         digital assistance ensures that innovation strengthens rather than replaces
         critical thinking.
       </p>
+    </section>
 
-      <p class="conclusion">
-        <span class="highlight">
-          In conclusion, the mindful application of AI requires balancing technical convenience
-          with critical thinking. Responsible use ensures technology empowers human judgment
-          rather than replacing it.
-        </span>
-      </p>
-
-      <div class="back-home">
-          <a href="../index.html">← Back to Home</a>
+    <section id="conclusion">
+      <div class="conclusion-box">
+        <p class="conclusion">
+          <span class="highlight">
+            In conclusion, the mindful application of AI requires balancing technical convenience
+            with critical thinking. Responsible use ensures technology empowers human judgment
+            rather than replacing it.
+          </span>
+        </p>
       </div>
+    </section>
 
-    </article>
-  </main>
+    <div class="back-home">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </article>
+</main>
 
-  <footer>
-    <p>&copy; 2026 Austria Literature</p>
-  </footer>
+<footer>
+  <p>&copy; 2026 Austria Literature</p>
+</footer>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
 
 </body>
 </html>
