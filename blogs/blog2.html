@@ -1,57 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Way of Machiavelli</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>The Way of Machiavelli</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <div class="header-container">
-        <h1>The Way of Machiavelli</h1>
-        <p class="subtitle">Reflections on leadership, influence, and strategy from a lifelong student leader.</p>
-    </div>
+  <h1>The Way of Machiavelli</h1>
+  <p class="subtitle">Reflections on leadership, influence, and strategy from a lifelong student leader.</p>
 </header>
 
 <main>
-    <article>
+  <nav class="blog-nav">
+    <button onclick="scrollToSection('intro')">Intro</button>
+    <button onclick="scrollToSection('body')">Body</button>
+    <button onclick="scrollToSection('conclusion')">Conclusion</button>
+  </nav>
 
-        <blockquote>
-            “It is better to be feared than loved, if you cannot be both.”<br>
-            Niccolò Machiavelli
-        </blockquote>
+  <article>
+    <section id="intro">
+      <blockquote>
+        “It is better to be feared than loved, if you cannot be both.”<br>
+        Niccolò Machiavelli
+      </blockquote>
+      <p class="dropcap">
+        <span class="highlight">Ang kapangyarihan ay hindi laging tungkol sa pagiging mabait o popular.</span> Growing up, I never planned to be a leader. <em>It was not a choice I consciously made. Leadership chose me.</em> In school, in organizations, even in small groups of friends, I realized that people looked to me for direction, for decisions, for guidance.
+      </p>
+    </section>
 
-        <p class="dropcap">
-            <span class="highlight">Ang kapangyarihan ay hindi laging tungkol sa pagiging mabait o popular.</span> Growing up, I never planned to be a leader. <em>It was not a choice I consciously made. Leadership chose me.</em> In school, in organizations, even in small groups of friends, I realized that people looked to me for direction, for decisions, for guidance.
-        </p>
+    <section id="body">
+      <p>
+        This unexpected role brought tension. My personal belief in doing good and being ethical, <em>inspired by Stoic teachings of Epictetus</em>, often collided with the realities of power. <span class="highlight">The lessons of Stoicism and Machiavelli taught me that leadership requires both moral awareness and practical strategy.</span>
+      </p>
 
-        <p>
-            This unexpected role brought tension. My personal belief in doing good and being ethical, <em>inspired by Stoic teachings of Epictetus</em>, often collided with the realities of power. <span class="highlight">The lessons of Stoicism and Machiavelli taught me that leadership requires both moral awareness and practical strategy.</span>
-        </p>
+      <p>
+        Bilang isang estudyante na lider, <strong>hindi iisang estilo ng pamumuno ang akma sa lahat ng sitwasyon.</strong> Kailangan mong matutong bumagay sa pangangailangan ng grupo at ng sitwasyon kahit na ang iyong personal na paniniwala sa kabutihan at pagiging patas, gaya ng itinuro ni <em>Epictetus sa Stoic philosophy</em>, ay minsang nagtatagisan sa realidad ng pamumuno. Ang pagiging lider ay hindi laging nangangahulugang kailangan kang paborito o laging mabait. Minsan, kailangang kausapin, patnubayan, o kahit pasimulan ang mahirap na desisyon kahit alam mong hindi lahat ay masisiyahan. <em>Ang kabaitan ay hindi sapat, lalo na sa mundong puno ng kompetisyon, kaguluhan, at ambisyon.</em>
+      </p>
 
-        <ul>
-            <li><b>Democratic Leadership:</b> Collaboration and consensus before decision-making.</li>
-            <li><b>Authoritarian Leadership:</b> Quick, decisive actions when urgent.</li>
-            <li><b>Supportive Leadership:</b> Motivation and guidance for team morale.</li>
-        </ul>
+      <ul>
+        <li><b>Democratic Leadership:</b> Ginagamit kapag mahalaga ang kolaborasyon at pagbuo ng mga ideya.</li>
+        <li><b>Authoritarian Leadership:</b> Ginagamit kapag malapit na ang deadlines at magulo ang sitwasyon.</li>
+        <li><b>Supportive Leadership:</b> Ginagamit kapag mababa ang morale at kailangan ng motivation.</li>
+      </ul>
 
+      <p>
+        Watching corrupt politicians in the Philippines made this clearer to me. They use strategy, fear, and manipulation but without moral limits. <em>That is where leadership fails.</em>
+      </p>
+    </section>
+
+    <section id="conclusion">
+      <div class="conclusion-box">
         <p class="conclusion">
-            Sa huli, natutunan ko na ang tunay na lider ay hindi sinusukat sa dami ng tagahanga kundi sa tapang na gumawa ng mahihirap na desisyon at sa karunungan na gamitin ang kapangyarihan nang may kabuluhan.
+          Sa huli, natutunan ko na ang tunay na lider ay hindi sinusukat sa dami ng tagahanga kundi sa tapang na gumawa ng mahihirap na desisyon at sa karunungan na gamitin ang kapangyarihan nang may kabuluhan.
         </p>
+      </div>
+    </section>
 
-        <div class="back-home">
-            <a href="../index.html">← Back to Home</a>
-        </div>
-
-    </article>
+    <div class="back-home">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </article>
 </main>
 
 <footer>
-    <p>&copy; 2026 Austria Literature</p>
+  <p>&copy; 2026 Austria Literature</p>
 </footer>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
 
 </body>
 </html>
