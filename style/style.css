@@ -66,86 +66,37 @@ header .subtitle {
 }
 
 /* =======================
-   MAIN AND ARTICLE STYLES
+   MAIN CONTENT STYLES
 ======================= */
 main {
-    max-width: 850px;
+    max-width: 900px;
     margin: 3rem auto;
     padding: 0 2rem;
 }
 
-article p {
-    margin-bottom: 1.8rem;
-    text-align: justify;
-    font-size: 1.12rem;
-}
-
-.dropcap:first-letter {
-    font-size: 3.5rem;
-    float: left;
-    line-height: 1;
-    margin-right: 0.15em;
-    font-weight: 700;
-    color: #03588c;
-}
-
 /* =======================
-   BLOCKQUOTE STYLES
+   GALLERY SECTION
 ======================= */
-blockquote {
-    font-style: italic;
-    color: #02577a;
-    border-left: 5px solid #0288a6;
-    background-color: rgba(2, 136, 166, 0.08);
-    padding-left: 1rem;
-    margin: 2.5rem 0;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-/* =======================
-   LIST STYLES
-======================= */
-article ul {
-    margin: 2rem 0 2.5rem 1.8rem;
-    padding-left: 1.5rem;
-    list-style-type: disc;
-}
-
-article ul li {
-    font-size: 1.08rem;
-    margin-bottom: 0.7rem;
-    color: #04395e;
-}
-
-article ul li::marker {
-    color: #0288a6;
-}
-
-/* =======================
-   BLUE HIGHLIGHT FOR IMPORTANT SENTENCES
-======================= */
-.highlight {
-    color: #0288a6;
-}
-
-/* =======================
-   CONCLUSION STYLES
-======================= */
-.conclusion {
-    font-style: italic;
+.gallery-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
     margin: 2rem 0;
 }
 
-.conclusion-box {
-    background-color: rgba(2, 136, 166, 0.1);
-    border-left: 5px solid #0288a6;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-    font-size: 1.14rem;
-    line-height: 1.6;
+.gallery-photo {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
 /* =======================
@@ -172,6 +123,17 @@ article ul li::marker {
 }
 
 /* =======================
+   SECTION HEADINGS
+======================= */
+section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #03588c;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* =======================
    FOOTER STYLES
 ======================= */
 footer {
@@ -187,133 +149,21 @@ footer p {
 }
 
 /* =======================
-   FONT FAMILY OVERRIDES
-======================= */
-h1, blockquote {
-    font-family: 'Playfair Display', serif;
-}
-
-p, .subtitle, li {
-    font-family: 'Georgia', serif;
-}
-
-/* =======================
    RESPONSIVE STYLES
 ======================= */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
+    .gallery-photo {
+        width: 45%;
+        margin-bottom: 1rem;
     }
 
-    article p {
-        font-size: 1rem;
-    }
-
-    blockquote {
-        font-size: 1.1rem;
-    }
-
-    footer {
-        padding: 2rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .scroll-nav a {
-        margin: 0 0.5rem;
-        padding: 0.4rem 0.8rem;
-        font-size: 0.95rem;
+    section h2 {
+        font-size: 1.5rem;
     }
 }
 
-/* =======================
-   BIO PHOTOS STYLING
-======================= */
-.bio-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  margin: 2.5rem 0;
-  flex-wrap: wrap;
-}
-
-.bio-photo {
-  width: 250px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
-
-.bio-photo:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.bio-photo.left { order: 1; }
-.bio-photo.right { order: 2; }
-
-.bio-section p {
-  flex: 1;
-  font-size: 1.12rem;
-  line-height: 1.8;
-  text-align: justify;
-}
-
-/* =======================
-   GALLERY STYLING
-======================= */
-.gallery-section {
-    margin: 3rem auto;
-    max-width: 1000px;
-    padding: 0 1.5rem;
-}
-
-.gallery-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #03588c;
-    font-family: 'Playfair Display', serif;
-}
-
-.gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.gallery-grid.row-align {
-    flex-wrap: nowrap; 
-    overflow-x: auto;  
-    padding-bottom: 1rem;
-}
-
-.gallery-grid a { display: block; }
-
-.gallery-photo {
-    width: 180px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-    cursor: pointer;
-}
-
-/* =======================
-   RESPONSIVE GALLERY
-======================= */
-@media (max-width: 768px) {
-    .bio-section { flex-direction: column; gap: 1.5rem; }
-
-    .bio-photo { width: 100%; max-width: 100%; }
-
-    .gallery-photo { width: 140px; height: 100px; }
-
-    .gallery-grid.row-align { flex-wrap: wrap; }
+@media (max-width: 480px) {
+    .gallery-photo {
+        width: 90%;
+    }
 }
