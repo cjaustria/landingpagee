@@ -1,4 +1,6 @@
-/* GENERAL BODY STYLES */
+/* =======================
+   GENERAL BODY STYLES
+======================= */
 body {
     font-family: 'Georgia', serif;
     background-color: #f4f7f9;
@@ -8,7 +10,9 @@ body {
     line-height: 1.8;
 }
 
-/* HEADER STYLES */
+/* =======================
+   HEADER STYLES
+======================= */
 header {
     background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
     padding: 4rem 1.5rem 3rem;
@@ -33,7 +37,37 @@ header .subtitle {
     line-height: 1.4;
 }
 
-/* MAIN AND ARTICLE STYLES */
+/* =======================
+   SCROLL NAVIGATION BAR
+======================= */
+.scroll-nav {
+    text-align: center;
+    background-color: #a0d8f8;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #0288a6;
+}
+
+.scroll-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #04395e;
+    margin: 0 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.scroll-nav a:hover {
+    background-color: #0288a6;
+    color: #fff;
+}
+
+/* =======================
+   MAIN AND ARTICLE STYLES
+======================= */
 main {
     max-width: 850px;
     margin: 3rem auto;
@@ -55,7 +89,9 @@ article p {
     color: #03588c;
 }
 
-/* BLOCKQUOTE STYLES */
+/* =======================
+   BLOCKQUOTE STYLES
+======================= */
 blockquote {
     font-style: italic;
     color: #02577a;
@@ -68,7 +104,9 @@ blockquote {
     line-height: 1.6;
 }
 
-/* LIST STYLES */
+/* =======================
+   LIST STYLES
+======================= */
 article ul {
     margin: 2rem 0 2.5rem 1.8rem;
     padding-left: 1.5rem;
@@ -85,58 +123,35 @@ article ul li::marker {
     color: #0288a6;
 }
 
-/* BLUE HIGHLIGHT FOR IMPORTANT SENTENCES */
+/* =======================
+   BLUE HIGHLIGHT FOR IMPORTANT SENTENCES
+======================= */
 .highlight {
     color: #0288a6;
 }
 
-/* CONCLUSION STYLE (subtle highlight, consistent for all blogs) */
+/* =======================
+   CONCLUSION STYLES
+======================= */
 .conclusion {
     font-style: italic;
     margin: 2rem 0;
 }
 
-/* =====================
-   SCROLL BUTTON NAV (INTRO / BODY / CONCLUSION)
-===================== */
-.scroll-nav {
-    text-align: center;
-    margin: 2rem 0 3rem 0;
-}
-
-.scroll-nav a {
-    display: inline-block;
-    margin: 0 0.6rem;
-    padding: 0.55rem 1.3rem;
-    font-weight: bold;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #0288a6, #03a9f4);
-    color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-}
-
-.scroll-nav a:hover {
-    background: linear-gradient(135deg, #03588c, #0288a6);
-    transform: translateY(-3px) scale(1.05);
-}
-
-/* =====================
-   CONCLUSION BOX
-===================== */
+/* NEW: STYLIZED CONCLUSION BOX */
 .conclusion-box {
-    border: 2px solid #0288a6;
-    background-color: #d0f0fd;
-    border-radius: 12px;
-    padding: 1.5rem 1.8rem;
-    margin-top: 2rem;
-    font-style: italic;
-    font-weight: bold;
-    color: #03588c;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    background-color: rgba(2, 136, 166, 0.1);
+    border-left: 5px solid #0288a6;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    font-size: 1.14rem;
+    line-height: 1.6;
 }
 
-/* BACK TO HOME BUTTON */
+/* =======================
+   BACK TO HOME BUTTON
+======================= */
 .back-home {
     text-align: center;
     margin: 3rem 0;
@@ -157,7 +172,9 @@ article ul li::marker {
     color: white;
 }
 
-/* FOOTER STYLES */
+/* =======================
+   FOOTER STYLES
+======================= */
 footer {
     background-color: #03588c;
     color: #e0f7fa;
@@ -170,7 +187,9 @@ footer p {
     margin: 0;
 }
 
-/* FONT FAMILY OVERRIDES */
+/* =======================
+   FONT FAMILY OVERRIDES
+======================= */
 h1, blockquote {
     font-family: 'Playfair Display', serif;
 }
@@ -179,7 +198,9 @@ p, .subtitle, li {
     font-family: 'Georgia', serif;
 }
 
-/* RESPONSIVE STYLES */
+/* =======================
+   RESPONSIVE STYLES
+======================= */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -199,7 +220,8 @@ p, .subtitle, li {
     }
 
     .scroll-nav a {
-        margin: 0.3rem 0.2rem;
-        padding: 0.45rem 1rem;
+        margin: 0 0.5rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.95rem;
     }
 }
