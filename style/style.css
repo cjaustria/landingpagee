@@ -1,5 +1,5 @@
 /* GENERAL BODY STYLES */
-body {
+.blog-page {
     font-family: 'Georgia', serif;
     background-color: #f4f7f9;
     color: #1a1a1a;
@@ -9,7 +9,7 @@ body {
 }
 
 /* HEADER STYLES */
-header {
+.blog-page header {
     background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
     padding: 4rem 1.5rem 3rem;
     text-align: center;
@@ -17,14 +17,14 @@ header {
     border-bottom: none;
 }
 
-header h1 {
+.blog-page header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     margin-bottom: 0.8rem;
     font-weight: 700;
 }
 
-header .subtitle {
+.blog-page header .subtitle {
     font-size: 1.1rem;
     font-style: italic;
     max-width: 600px;
@@ -34,19 +34,19 @@ header .subtitle {
 }
 
 /* MAIN AND ARTICLE STYLES */
-main {
+.blog-page main {
     max-width: 850px;
     margin: 3rem auto;
     padding: 0 2rem;
 }
 
-article p {
+.blog-page article p {
     margin-bottom: 1.8rem;
     text-align: justify;
     font-size: 1.12rem;
 }
 
-.dropcap:first-letter {
+.blog-page .dropcap:first-letter {
     font-size: 3.5rem;
     float: left;
     line-height: 1;
@@ -56,7 +56,7 @@ article p {
 }
 
 /* BLOCKQUOTE STYLES */
-blockquote {
+.blog-page blockquote {
     font-style: italic;
     color: #02577a;
     border-left: 5px solid #0288a6;
@@ -69,40 +69,40 @@ blockquote {
 }
 
 /* LIST STYLES */
-article ul {
+.blog-page article ul {
     margin: 2rem 0 2.5rem 1.8rem;
     padding-left: 1.5rem;
     list-style-type: disc;
 }
 
-article ul li {
+.blog-page article ul li {
     font-size: 1.08rem;
     margin-bottom: 0.7rem;
     color: #04395e;
 }
 
-article ul li::marker {
+.blog-page article ul li::marker {
     color: #0288a6;
 }
 
 /* BLUE HIGHLIGHT FOR IMPORTANT SENTENCES */
-.highlight {
+.blog-page .highlight {
     color: #0288a6;
 }
 
-/* CONCLUSION STYLE (subtle highlight, consistent for all blogs) */
-.conclusion {
+/* CONCLUSION STYLE */
+.blog-page .conclusion {
     font-style: italic;
     margin: 2rem 0;
 }
 
 /* BACK TO HOME BUTTON */
-.back-home {
+.blog-page .back-home {
     text-align: center;
     margin: 3rem 0;
 }
 
-.back-home a {
+.blog-page .back-home a {
     text-decoration: none;
     font-weight: bold;
     color: #0288a6;
@@ -112,13 +112,13 @@ article ul li::marker {
     transition: 0.3s ease;
 }
 
-.back-home a:hover {
+.blog-page .back-home a:hover {
     background-color: #0288a6;
     color: white;
 }
 
 /* FOOTER STYLES */
-footer {
+.blog-page footer {
     background-color: #03588c;
     color: #e0f7fa;
     text-align: center;
@@ -126,34 +126,37 @@ footer {
     font-style: italic;
 }
 
-footer p {
+.blog-page footer p {
     margin: 0;
 }
 
 /* FONT FAMILY OVERRIDES */
-h1, blockquote {
+.blog-page h1,
+.blog-page blockquote {
     font-family: 'Playfair Display', serif;
 }
 
-p, .subtitle, li {
+.blog-page p,
+.blog-page .subtitle,
+.blog-page li {
     font-family: 'Georgia', serif;
 }
 
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
-    header h1 {
+    .blog-page header h1 {
         font-size: 2rem;
     }
 
-    article p {
+    .blog-page article p {
         font-size: 1rem;
     }
 
-    blockquote {
+    .blog-page blockquote {
         font-size: 1.1rem;
     }
 
-    footer {
+    .blog-page footer {
         padding: 2rem 1rem;
         font-size: 0.9rem;
     }
