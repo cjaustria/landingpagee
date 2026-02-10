@@ -179,3 +179,42 @@ ul li {
 html {
     scroll-behavior: smooth;
 }
+
+/* =====================
+   HERO IMAGE AND INTRO
+===================== */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #e0f7fa;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+.hero img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.hero p.role {
+    font-size: 1.1rem;
+    color: #03588c;
+}
+
+.hero blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 1rem;
+    color: #02577a;
+}
