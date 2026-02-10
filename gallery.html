@@ -1,82 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery – Austria Literature</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Gallery – Austria Literature</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <h1>Austria Literature – Gallery</h1>
-    <p class="subtitle">A curated collection of all photos from landing page, bio, and blogs</p>
+  <h1>Gallery</h1>
+  <p class="subtitle">A visual archive of my landing page, biography, and blog moments.</p>
 
-    <!-- Top Navigation Bar -->
-    <div class="scroll-nav">
-        <a href="#landing">Landing Page Photos</a>
-        <a href="#bio">Biography Photos</a>
-        <a href="#blogs">Blog Photos</a>
-    </div>
+  <!-- Top Navigation (same design as blogs, but links to gallery sections) -->
+  <div class="scroll-nav">
+    <a href="#landing">Landing Page</a>
+    <a href="#bio">Biography</a>
+    <a href="#blogs">Blogs</a>
+  </div>
 </header>
 
 <main>
 
-    <!-- Landing Page Photos -->
-    <section id="landing" class="gallery-section">
-        <h2>Landing Page Photos</h2>
-        <div class="gallery-grid">
-            <a href="images/intropic.jpg" target="_self">
-                <img src="images/intropic.jpg" alt="Landing Page Main" class="gallery-photo">
-            </a>
-        </div>
-    </section>
+  <!-- LANDING PAGE PHOTOS -->
+  <section id="landing" class="gallery-section">
+    <h2>Landing Page Photos</h2>
+    <div class="gallery-grid">
+      <a href="images/intropic.jpg" target="_self">
+        <img src="images/intropic.jpg" alt="Landing Page Photo" class="gallery-photo">
+      </a>
+    </div>
+  </section>
 
-    <!-- Biography Photos -->
-    <section id="bio" class="gallery-section">
-        <h2>Biography Photos</h2>
-        <div class="gallery-grid">
-            <a href="images/childhood.jpg" target="_self">
-                <img src="images/childhood.jpg" alt="Childhood Photo" class="gallery-photo">
-            </a>
-            <a href="images/teenage.jpg" target="_self">
-                <img src="images/teenage.jpg" alt="Teenage Photo" class="gallery-photo">
-            </a>
-            <a href="images/college.jpg" target="_self">
-                <img src="images/college.jpg" alt="College Photo" class="gallery-photo">
-            </a>
-        </div>
-    </section>
-
-    <!-- Blog Photos -->
-    <section id="blogs" class="gallery-section">
-        <h2>Blog Photos</h2>
-        <div class="gallery-grid row-align">
-            <a href="images/aibrain.jpg" target="_self">
-                <img src="images/aibrain.jpg" alt="From Diskarte to Dependency" class="gallery-photo">
-            </a>
-            <a href="images/machia.jpg" target="_self">
-                <img src="images/machia.jpg" alt="The Way of Machiavelli" class="gallery-photo">
-            </a>
-            <a href="images/eatlast.jpg" target="_self">
-                <img src="images/eatlast.jpg" alt="The Man Who Sits with Everybody - Eat Last" class="gallery-photo">
-            </a>
-            <a href="images/atomic.jpg" target="_self">
-                <img src="images/atomic.jpg" alt="The Man Who Sits with Everybody - Atomic" class="gallery-photo">
-            </a>
-            <a href="images/highly.jpg" target="_self">
-                <img src="images/highly.jpg" alt="The Man Who Sits with Everybody - Highly" class="gallery-photo">
-            </a>
-        </div>
-    </section>
-
-    <!-- Back to Home -->
-    <div class="back-home">
-        <a href="index.html">← Back to Home</a>
+  <!-- BIOGRAPHY PHOTOS -->
+  <section id="bio" class="gallery-section">
+    <h2>Biography Photos</h2>
+    <h3>Childhood</h3>
+    <div class="gallery-grid">
+      <a href="images/childhood.jpg" target="_self">
+        <img src="images/childhood.jpg" alt="Childhood" class="gallery-photo">
+      </a>
     </div>
 
+    <h3>Teenage</h3>
+    <div class="gallery-grid">
+      <a href="images/teenage.jpg" target="_self">
+        <img src="images/teenage.jpg" alt="Teenage" class="gallery-photo">
+      </a>
+    </div>
+
+    <h3>College</h3>
+    <div class="gallery-grid">
+      <a href="images/college.jpg" target="_self">
+        <img src="images/college.jpg" alt="College" class="gallery-photo">
+      </a>
+    </div>
+  </section>
+
+  <!-- BLOG PHOTOS -->
+  <section id="blogs" class="gallery-section">
+    <h2>Blog Photos</h2>
+
+    <h3>From Diskarte to Dependency</h3>
+    <div class="gallery-grid row-align">
+      <a href="images/aibrain.jpg" target="_self">
+        <img src="images/aibrain.jpg" alt="From Diskarte to Dependency" class="gallery-photo">
+      </a>
+    </div>
+
+    <h3>The Way of Machiavelli</h3>
+    <div class="gallery-grid row-align">
+      <a href="images/machia.jpeg" target="_self">
+        <img src="images/machia.jpeg" alt="The Way of Machiavelli" class="gallery-photo">
+      </a>
+    </div>
+
+    <h3>The Man Who Sits with Everybody</h3>
+    <div class="gallery-grid row-align">
+      <a href="images/eatlast.jpg" target="_self">
+        <img src="images/eatlast.jpg" alt="The Man Who Sits with Everybody" class="gallery-photo">
+      </a>
+
+      <a href="images/atomic.jpg" target="_self">
+        <img src="images/atomic.jpg" alt="Atomic Habits" class="gallery-photo">
+      </a>
+
+      <a href="images/highly.jpg" target="_self">
+        <img src="images/highly.jpg" alt="Highly Effective People" class="gallery-photo">
+      </a>
+    </div>
+  </section>
+
+  <div class="back-home">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
 </main>
+
+<footer>
+  <p>&copy; 2026 Austria Literature</p>
+</footer>
 
 </body>
 </html>
