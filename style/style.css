@@ -1,5 +1,5 @@
 /* =====================
-   GENERAL BODY STYLING
+   GENERAL BODY STYLES
 ===================== */
 body {
     font-family: 'Georgia', serif;
@@ -21,105 +21,111 @@ a:hover {
 }
 
 /* =====================
-   HEADER STYLING
+   HEADER STYLES
 ===================== */
 header {
-    text-align: center;
-    padding: 2rem 1rem;
     background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #04395e;
+    border-bottom: none;
 }
 
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
 }
 
 header .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
     color: #03588c;
+    line-height: 1.4;
 }
 
 /* =====================
-   SCROLL BUTTON NAV (Intro / Body / Conclusion)
+   MAIN AND ARTICLE STYLES
+===================== */
+main {
+    max-width: 850px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+article p {
+    margin-bottom: 1.8rem;
+    text-align: justify;
+    font-size: 1.12rem;
+}
+
+.dropcap:first-letter {
+    font-size: 3.5rem;
+    float: left;
+    line-height: 1;
+    margin-right: 0.15em;
+    font-weight: 700;
+    color: #03588c;
+}
+
+blockquote {
+    font-style: italic;
+    color: #02577a;
+    border-left: 5px solid #0288a6;
+    background-color: rgba(2, 136, 166, 0.08);
+    padding-left: 1rem;
+    margin: 2.5rem 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+article ul {
+    margin: 2rem 0 2.5rem 1.8rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+article ul li {
+    font-size: 1.08rem;
+    margin-bottom: 0.7rem;
+    color: #04395e;
+}
+
+article ul li::marker {
+    color: #0288a6;
+}
+
+.highlight {
+    color: #0288a6;
+}
+
+/* =====================
+   SCROLL BUTTON NAV (INTRO / BODY / CONCLUSION)
 ===================== */
 .scroll-nav {
     text-align: center;
-    margin: 2rem 0;
+    margin: 2rem 0 3rem 0;
 }
 
 .scroll-nav a {
     display: inline-block;
-    margin: 0 0.5rem;
-    padding: 0.6rem 1.2rem;
-    background: linear-gradient(135deg, #0288a6, #03a9f4);
-    color: #fff;
+    margin: 0 0.6rem;
+    padding: 0.55rem 1.3rem;
     font-weight: bold;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-radius: 30px;
+    background: linear-gradient(135deg, #0288a6, #03a9f4);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
 
 .scroll-nav a:hover {
     background: linear-gradient(135deg, #03588c, #0288a6);
     transform: translateY(-3px) scale(1.05);
-}
-
-/* =====================
-   ARTICLE STYLING
-===================== */
-article {
-    max-width: 900px;
-    margin: 2rem auto 3rem auto;
-    padding: 2rem;
-    background-color: #e0f7fa;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-article h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: #03588c;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-article p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-article blockquote {
-    font-style: italic;
-    margin: 1.5rem 0;
-    padding-left: 1rem;
-    border-left: 4px solid #0288a6;
-    color: #03588c;
-}
-
-article .dropcap:first-letter {
-    float: left;
-    font-size: 3rem;
-    line-height: 1;
-    padding-right: 0.1rem;
-    font-weight: bold;
-    color: #0288a6;
-}
-
-article .highlight {
-    background-color: #fff8c4;
-    padding: 0 0.2rem;
-    border-radius: 3px;
-}
-
-ul {
-    margin-left: 1.5rem;
-}
-
-ul li {
-    margin-bottom: 0.5rem;
 }
 
 /* =====================
@@ -131,6 +137,7 @@ ul li {
     border-radius: 12px;
     padding: 1.5rem 1.8rem;
     margin-top: 2rem;
+    font-style: italic;
     font-weight: bold;
     color: #03588c;
     box-shadow: 0 6px 12px rgba(0,0,0,0.08);
@@ -141,60 +148,74 @@ ul li {
 ===================== */
 .back-home {
     text-align: center;
-    margin-top: 2rem;
+    margin: 3rem 0;
 }
 
 .back-home a {
-    padding: 0.6rem 1.4rem;
-    background-color: #0288a6;
-    color: #fff;
-    border-radius: 25px;
+    text-decoration: none;
     font-weight: bold;
+    color: #0288a6;
+    border: 2px solid #0288a6;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
     transition: all 0.3s ease;
 }
 
 .back-home a:hover {
-    background-color: #03588c;
-    transform: translateY(-2px);
+    background-color: #0288a6;
+    color: white;
 }
 
 /* =====================
-   BLOG CARDS / INTERESTING GRID
+   FOOTER STYLES
 ===================== */
-.blog-card, .interesting-item {
-    background-color: #d0f0fd;
-    border: 2px solid #0288a6;
-    border-radius: 12px;
-    padding: 1.5rem 1.5rem;
-    margin: 1.5rem 0;
+footer {
+    background-color: #03588c;
+    color: #e0f7fa;
     text-align: center;
-    font-weight: bold;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
+    padding: 2.5rem 1rem;
+    font-style: italic;
 }
 
-.blog-card:hover, .interesting-item:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    background-color: #03a9f4;
-    color: white;
+footer p {
+    margin: 0;
+}
+
+/* =====================
+   FONT FAMILY OVERRIDES
+===================== */
+h1, blockquote {
+    font-family: 'Playfair Display', serif;
+}
+
+p, .subtitle, li {
+    font-family: 'Georgia', serif;
 }
 
 /* =====================
    RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
-    article {
-        padding: 1rem;
-    }
-
     header h1 {
         font-size: 2rem;
     }
 
+    article p {
+        font-size: 1rem;
+    }
+
+    blockquote {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+        font-size: 0.9rem;
+    }
+
     .scroll-nav a {
         margin: 0.3rem 0.2rem;
-        padding: 0.5rem 1rem;
+        padding: 0.45rem 1rem;
     }
 }
 
