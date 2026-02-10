@@ -5,15 +5,10 @@
     <title>Austria Literature – Landing Page</title>
     <link rel="stylesheet" href="landing/landing.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page – Christian Austria</title>
-  <link rel="stylesheet" href="style/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="sticky-header">
+<header>
     <div class="header-left">
         <h1>Austria Literature</h1>
         <p class="subtitle">Stories, reflections, and leadership insights.</p>
@@ -24,17 +19,6 @@
         <a href="bio/bio.html">Bio</a>
         <a href="#blogs">Blogs</a>
     </nav>
-<header>
-  <h1>Christian Austria Portfolio</h1>
-  <p class="subtitle">Welcome to my personal website</p>
-
-  <!-- Top Navigation -->
-  <div class="scroll-nav">
-    <a href="landing.html">Landing Page</a>
-    <a href="bio/bio.html">Biography</a>
-    <a href="blogs/blog1.html">Blogs</a>
-    <a href="gallery.html">Gallery</a>
-  </div>
 </header>
 
 <section class="hero">
@@ -66,15 +50,6 @@
             experiences, lessons from literature, and insights from fictional and real-life leaders.
             You can read my full story in my <a href="bio/bio.html">biography</a>.
         </p>
-  <article>
-    <section>
-      <h2>Landing Page Photo</h2>
-      <a href="images/intropic.jpg" target="_self">
-        <img src="images/intropic.jpg" alt="Landing Page Main" class="bio-photo left">
-      </a>
-      <p>
-        This is the main photo of my portfolio landing page. Click the image to see it full size in the same window.
-      </p>
     </section>
 
     <section id="interesting" class="interesting">
@@ -135,31 +110,11 @@
             <a href="blogs/blog3.html">Read Blog →</a>
         </div>
     </section>
-    <div class="back-home">
-      <a href="index.html">← Back to Home</a>
-    </div>
-  </article>
 </main>
 
 <footer>
     <p>&copy; 2026 Austria Literature</p>
-  <p>&copy; 2026 Christian Austria</p>
 </footer>
-
-<script>
-  // Smooth scroll to titles (fix anchor offset due to sticky header)
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          const offset = 80; // adjust based on header height
-          const bodyRect = document.body.getBoundingClientRect().top;
-          const elemRect = target.getBoundingClientRect().top;
-          const scrollPos = elemRect - bodyRect - offset;
-          window.scrollTo({ top: scrollPos, behavior: 'smooth' });
-      });
-  });
-</script>
 
 </body>
 </html>
