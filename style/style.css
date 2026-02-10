@@ -1,6 +1,4 @@
-/* =======================
-   GENERAL BODY STYLES
-======================= */
+/* GENERAL BODY STYLES */
 body {
     font-family: 'Georgia', serif;
     background-color: #f4f7f9;
@@ -10,9 +8,7 @@ body {
     line-height: 1.8;
 }
 
-/* =======================
-   HEADER STYLES (BLOG + BIO)
-======================= */
+/* HEADER STYLES */
 header {
     background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
     padding: 4rem 1.5rem 3rem;
@@ -37,9 +33,7 @@ header .subtitle {
     line-height: 1.4;
 }
 
-/* =======================
-   MAIN AND ARTICLE STYLES
-======================= */
+/* MAIN AND ARTICLE STYLES */
 main {
     max-width: 850px;
     margin: 3rem auto;
@@ -61,9 +55,7 @@ article p {
     color: #03588c;
 }
 
-/* =======================
-   BLOCKQUOTE STYLES
-======================= */
+/* BLOCKQUOTE STYLES */
 blockquote {
     font-style: italic;
     color: #02577a;
@@ -76,9 +68,7 @@ blockquote {
     line-height: 1.6;
 }
 
-/* =======================
-   LIST STYLES
-======================= */
+/* LIST STYLES */
 article ul {
     margin: 2rem 0 2.5rem 1.8rem;
     padding-left: 1.5rem;
@@ -95,24 +85,18 @@ article ul li::marker {
     color: #0288a6;
 }
 
-/* =======================
-   BLUE HIGHLIGHT
-======================= */
+/* BLUE HIGHLIGHT FOR IMPORTANT SENTENCES */
 .highlight {
     color: #0288a6;
 }
 
-/* =======================
-   CONCLUSION
-======================= */
+/* CONCLUSION STYLE (subtle highlight, consistent for all blogs) */
 .conclusion {
     font-style: italic;
     margin: 2rem 0;
 }
 
-/* =======================
-   BACK TO HOME BUTTON
-======================= */
+/* BACK TO HOME BUTTON */
 .back-home {
     text-align: center;
     margin: 3rem 0;
@@ -133,9 +117,7 @@ article ul li::marker {
     color: white;
 }
 
-/* =======================
-   FOOTER STYLES
-======================= */
+/* FOOTER STYLES */
 footer {
     background-color: #03588c;
     color: #e0f7fa;
@@ -148,9 +130,7 @@ footer p {
     margin: 0;
 }
 
-/* =======================
-   FONT OVERRIDES
-======================= */
+/* FONT FAMILY OVERRIDES */
 h1, blockquote {
     font-family: 'Playfair Display', serif;
 }
@@ -159,78 +139,7 @@ p, .subtitle, li {
     font-family: 'Georgia', serif;
 }
 
-/* =======================
-   BIO PHOTO LAYOUT (FIXED & AESTHETIC)
-======================= */
-.bio-section {
-    margin: 3rem 0;
-}
-
-.bio-photo {
-    width: 220px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 1.5rem 1rem 0;
-}
-
-.bio-photo:hover {
-    transform: scale(1.04);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.28);
-}
-
-/* Google Docs-style text wrap */
-.bio-photo.left {
-    float: left;
-}
-
-.bio-photo.right {
-    float: right;
-    margin: 0 0 1rem 1.5rem;
-}
-
-/* Clear floats between sections */
-.bio-clear {
-    clear: both;
-}
-
-/* =======================
-   GALLERY (SCOPED – WON'T AFFECT BLOG/BIO)
-======================= */
-.gallery-section {
-    margin-bottom: 3rem;
-}
-
-.gallery-grid {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-}
-
-.gallery-grid.row-align {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-}
-
-.gallery-photo {
-    width: 180px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-}
-
-/* =======================
-   RESPONSIVE
-======================= */
+/* RESPONSIVE STYLES */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -247,11 +156,5 @@ p, .subtitle, li {
     footer {
         padding: 2rem 1rem;
         font-size: 0.9rem;
-    }
-
-    .bio-photo {
-        width: 100%;
-        float: none;
-        margin: 0 0 1.5rem 0;
     }
 }
