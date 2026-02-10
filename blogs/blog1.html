@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>From Diskarte to Dependency</title>
-  <link rel="stylesheet" href="style/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,13 +15,15 @@
 </header>
 
 <main>
-  <nav class="blog-nav">
-    <button onclick="scrollToSection('intro')">Intro</button>
-    <button onclick="scrollToSection('body')">Body</button>
-    <button onclick="scrollToSection('conclusion')">Conclusion</button>
-  </nav>
+  <!-- Scroll navigation -->
+  <div class="scroll-nav">
+    <a href="#intro">Intro</a> | 
+    <a href="#body">Body</a> | 
+    <a href="#conclusion">Conclusion</a>
+  </div>
 
   <article>
+
     <section id="intro">
       <p>
         <q>AI will not replace us, it will amplify us</q>, according to
@@ -28,6 +31,7 @@
         <strong>artificial intelligence</strong> enhances human capability or weakens
         <em>independent thought</em> in modern society.
       </p>
+
       <p>
         Artificial intelligence tools are now embedded in global industries such as
         <strong>healthcare</strong>, <strong>finance</strong>, and <strong>education</strong>.
@@ -35,13 +39,13 @@
         online learning platforms, and automated customer service systems, reshaping
         how people approach decision making.
       </p>
-    </section>
 
-    <section id="body">
       <blockquote>
         Technology becomes a problem when convenience replaces critical engagement.
       </blockquote>
+    </section>
 
+    <section id="body">
       <p>
         The Filipino concept of <strong>diskarte</strong> represents creativity and adaptability
         developed through experience. When AI provides instant answers, overreliance may
@@ -63,33 +67,26 @@
       </p>
     </section>
 
-    <section id="conclusion">
-      <div class="conclusion-box">
-        <p class="conclusion">
-          <span class="highlight">
-            In conclusion, the mindful application of AI requires balancing technical convenience
-            with critical thinking. Responsible use ensures technology empowers human judgment
-            rather than replacing it.
-          </span>
-        </p>
-      </div>
+    <section id="conclusion" class="conclusion-box">
+      <p>
+        <span class="highlight">
+          In conclusion, the mindful application of AI requires balancing technical convenience
+          with critical thinking. Responsible use ensures technology empowers human judgment
+          rather than replacing it.
+        </span>
+      </p>
     </section>
 
     <div class="back-home">
-      <a href="index.html">← Back to Home</a>
+      <a href="../index.html">← Back to Home</a>
     </div>
+
   </article>
 </main>
 
 <footer>
   <p>&copy; 2026 Austria Literature</p>
 </footer>
-
-<script>
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-</script>
 
 </body>
 </html>
