@@ -41,21 +41,20 @@ header .subtitle {
    SCROLL NAVIGATION BAR
 ======================= */
 .scroll-nav {
-    text-align: center;
-    background-color: #a0d8f8;
-    padding: 1rem 0;
-    position: sticky;
+    text-align: center; /* keep original alignment under header */
+    background-color: #a0d8f8; /* original color */
+    padding: 1rem 0; /* original padding */
+    border-bottom: 2px solid #0288a6;
+    position: sticky; /* sticky effect */
     top: 0;
     z-index: 1000;
-    border-bottom: 2px solid #0288a6;
-    margin-bottom: 2rem;
 }
 
 .scroll-nav a {
     text-decoration: none;
     font-weight: 600;
     color: #04395e;
-    margin: 0 1rem;
+    margin: 0 1.2rem;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     transition: 0.3s ease;
@@ -139,6 +138,7 @@ article ul li::marker {
     margin: 2rem 0;
 }
 
+/* NEW: STYLIZED CONCLUSION BOX */
 .conclusion-box {
     background-color: rgba(2, 136, 166, 0.1);
     border-left: 5px solid #0288a6;
@@ -173,18 +173,49 @@ article ul li::marker {
 }
 
 /* =======================
-   FOOTER STYLES
+   BIO IMAGE SECTION
 ======================= */
-footer {
-    background-color: #03588c;
-    color: #e0f7fa;
-    text-align: center;
-    padding: 2.5rem 1rem;
-    font-style: italic;
+.bio-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 2.5rem 0;
+    flex-wrap: wrap; /* responsive wrapping */
 }
 
-footer p {
-    margin: 0;
+.bio-photo {
+    width: 200px; /* smaller size */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bio-photo:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+/* Image alignment for aesthetic flow */
+.bio-photo.left {
+    float: left;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.bio-photo.right {
+    float: right;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Wrap text effect like Google Docs */
+.bio-section p {
+    font-size: 1.12rem;
+    line-height: 1.8;
+    text-align: justify;
+    overflow-wrap: break-word;
 }
 
 /* =======================
@@ -224,51 +255,10 @@ p, .subtitle, li {
         padding: 0.4rem 0.8rem;
         font-size: 0.95rem;
     }
-}
 
-/* =======================
-   BIO SECTION AND IMAGES
-======================= */
-.bio-section {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.8rem;
-    margin: 2.5rem 0;
-    flex-wrap: wrap;
-}
-
-.bio-photo {
-    width: 200px;  /* smaller size */
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-    float: left;  /* text wraps around */
-    margin: 0 1.5rem 1rem 0;
-}
-
-.bio-photo.right {
-    float: right;
-    margin: 0 0 1rem 1.5rem;
-}
-
-.bio-photo:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-.bio-section p {
-    font-size: 1.12rem;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-/* Responsive for small screens */
-@media (max-width: 768px) {
-    .bio-section {
-        flex-direction: column;
-    }
-    .bio-photo, .bio-photo.right {
+    .bio-photo {
+        width: 100%;
+        max-width: 100%;
         float: none;
         margin: 0 auto 1.5rem auto;
         display: block;
