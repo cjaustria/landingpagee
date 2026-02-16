@@ -18,14 +18,14 @@
 
     <!-- Local / Foreign Selection -->
     <div class="selection-grid">
-        <div class="selection-item" id="local-btn">
+        <a href="#local-section" class="selection-item">
             <img src="images/beats/local/local.jpg" alt="Local">
             <div class="overlay">Local</div>
-        </div>
-        <div class="selection-item" id="foreign-btn">
+        </a>
+        <a href="#foreign-section" class="selection-item">
             <img src="images/beats/foreign/foreign.jpg" alt="Foreign">
             <div class="overlay">Foreign</div>
-        </div>
+        </a>
     </div>
 
     <!-- Local Artists -->
@@ -157,26 +157,6 @@
     </div>
 
 </main>
-
-<script>
-    // Show/hide sections
-    const localBtn = document.getElementById('local-btn');
-    const foreignBtn = document.getElementById('foreign-btn');
-    const localSection = document.getElementById('local-section');
-    const foreignSection = document.getElementById('foreign-section');
-
-    localBtn.addEventListener('click', () => {
-        localSection.style.display = 'block';
-        foreignSection.style.display = 'none';
-        window.scrollTo({ top: localSection.offsetTop - 100, behavior: 'smooth' });
-    });
-
-    foreignBtn.addEventListener('click', () => {
-        foreignSection.style.display = 'block';
-        localSection.style.display = 'none';
-        window.scrollTo({ top: foreignSection.offsetTop - 100, behavior: 'smooth' });
-    });
-</script>
 
 </body>
 </html>
