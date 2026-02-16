@@ -1,7 +1,8 @@
+/* FULL SCREEN HERO */
 .beats-hero {
     display: flex;
     width: 100%;
-    height: calc(100vh - 120px); /* full screen minus header */
+    height: calc(100vh - 120px); /* full viewport minus header height */
     flex-wrap: nowrap; /* keep images side by side */
 }
 
@@ -10,13 +11,12 @@
     flex: 1; /* each image takes half the width */
     overflow: hidden;
     cursor: pointer;
-    min-height: 0; /* prevents flex overflow */
 }
 
 .vs-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* scale image to fill container */
+    object-fit: cover; /* fill the container */
     display: block;
     transition: transform 0.3s ease;
 }
@@ -25,32 +25,38 @@
     transform: scale(1.05);
 }
 
+/* Overlay text centered both vertically and horizontally */
 .overlay {
     position: absolute;
-    bottom: 20px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
     font-weight: bold;
     color: white;
-    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
     pointer-events: none;
+    text-align: center;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE: stack images on smaller screens */
 @media (max-width: 1024px) {
     .beats-hero {
         flex-direction: column;
-        height: auto;
+        height: calc(100vh - 120px); /* still occupy full remaining height */
     }
 
     .vs-item {
-        height: 50vh; /* half viewport height on mobile */
+        height: 50%; /* half of the remaining height for each image */
     }
 
     .overlay {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .overlay {
         font-size: 1.5rem;
-        bottom: 10px;
     }
 }
