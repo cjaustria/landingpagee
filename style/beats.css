@@ -1,33 +1,30 @@
 /* =======================
-   BEATS PAGE HERO - TEKKEN VS STYLE
+   BEATS PAGE HERO - CLEAN SIDE-BY-SIDE STYLE
 ======================= */
 
 .beats-hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 100px); /* full screen minus header height */
+    height: calc(100vh - 100px); /* full screen minus header */
     background-color: #f4f7f9;
-    position: relative;
 }
 
 .vs-grid {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    position: relative;
+    align-items: stretch; /* images same height */
+    width: 100%;
+    gap: 0; /* images touch each other like Dior homepage */
 }
 
 .vs-item {
     position: relative;
-    width: 300px;
-    height: 450px;
+    flex: 1; /* each image takes half width */
+    height: 100%;
     overflow: hidden;
-    border-radius: 12px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .vs-item img {
@@ -40,29 +37,20 @@
 
 .vs-item:hover img {
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* Overlay text at bottom of each image */
 .overlay {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
+    left: 0;
     width: 100%;
-    background: rgba(2,136,166,0.8);
-    color: white;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    padding: 1rem 0;
-}
-
-.vs-vs {
-    position: absolute;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #0288a6;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    pointer-events: none; /* allow clicking image underneath */
 }
 
 /* =======================
@@ -71,18 +59,15 @@
 @media (max-width: 768px) {
     .vs-grid {
         flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .vs-vs {
-        font-size: 2rem;
-        top: auto;
-        bottom: 50%;
-        transform: translateY(50%);
+        height: auto;
     }
 
     .vs-item {
-        width: 80%;
-        height: 350px;
+        height: 50vh;
+    }
+
+    .overlay {
+        font-size: 1.5rem;
+        bottom: 10px;
     }
 }
