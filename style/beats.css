@@ -3,12 +3,12 @@
     display: flex;
     width: 100%;
     height: calc(100vh - 120px); /* full viewport minus header height */
-    flex-wrap: nowrap; /* keep images side by side */
+    flex-wrap: nowrap; /* side by side */
 }
 
 .vs-item {
     position: relative;
-    flex: 1; /* each image takes half the width */
+    flex: 1; /* each image takes 50% width */
     overflow: hidden;
     cursor: pointer;
 }
@@ -16,7 +16,7 @@
 .vs-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* fill the container */
+    object-fit: cover; /* fill container, crop if needed */
     display: block;
     transition: transform 0.3s ease;
 }
@@ -25,7 +25,7 @@
     transform: scale(1.05);
 }
 
-/* Overlay text centered both vertically and horizontally */
+/* Overlay centered with semi-transparent background */
 .overlay {
     position: absolute;
     top: 50%;
@@ -34,29 +34,36 @@
     font-size: 3rem;
     font-weight: bold;
     color: white;
-    text-shadow: 0 0 15px rgba(0,0,0,0.8);
-    pointer-events: none;
     text-align: center;
+    pointer-events: none;
+
+    /* Dark semi-transparent background for readability */
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-shadow: none; /* background removes need for shadow */
 }
 
-/* RESPONSIVE: stack images on smaller screens */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
     .beats-hero {
         flex-direction: column;
-        height: calc(100vh - 120px); /* still occupy full remaining height */
+        height: calc(100vh - 120px); /* full remaining height */
     }
 
     .vs-item {
-        height: 50%; /* half of the remaining height for each image */
+        height: 50%; /* each image half of hero height */
     }
 
     .overlay {
         font-size: 2rem;
+        padding: 0.6rem 1rem;
     }
 }
 
 @media (max-width: 600px) {
     .overlay {
         font-size: 1.5rem;
+        padding: 0.4rem 0.8rem;
     }
 }
