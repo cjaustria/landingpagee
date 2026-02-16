@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Beats</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/beats.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>My Beats</title>
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="beats/beats.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- HEADER / NAVIGATION -->
 <header>
     <div class="header-left">
-        <h1>My Beats</h1>
-        <p class="subtitle">Explore my favorite songs, artists, and albums</p>
+        <h1>Austria Literature</h1>
+        <p class="subtitle">Stories, reflections, and favorite tunes.</p>
     </div>
-    <nav class="header-right">
+    <nav class="header-right scroll-nav">
         <a href="index.html">Home</a>
         <a href="bio/bio.html">Bio</a>
         <a href="blogs/blog1.html">Blogs</a>
         <a href="gallery.html">Gallery</a>
+        <a href="beats.html">Beats</a>
     </nav>
 </header>
 
-
-<main class="beats-hero">
-    <div class="vs-grid">
-        <a href="local.html" class="vs-item">
-            <img src="images/beats/local/local.jpg" alt="Local">
-            <div class="overlay">Local</div>
-        </a>
-
-        <a href="foreign.html" class="vs-item">
-            <img src="images/beats/foreign/foreign.jpg" alt="Foreign">
-            <div class="overlay">Foreign</div>
-        </a>
-    </div>
-</main>
-
+<!-- FULL SCREEN LOCAL / FOREIGN HERO -->
+<section class="beats-hero">
+    <a href="beats/local.html" class="vs-item">
+        <img src="images/beats/local.jpg" alt="Local">
+        <div class="overlay">Local</div>
+    </a>
+    <a href="beats/foreign.html" class="vs-item">
+        <img src="images/beats/foreign.jpg" alt="Foreign">
+        <div class="overlay">Foreign</div>
+    </a>
+</section>
 
 </body>
 </html>
