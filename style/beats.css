@@ -1,22 +1,27 @@
-/* FULL SCREEN HERO (smaller) */
+/* HERO SECTION FIXED HEIGHT */
 .beats-hero {
     display: flex;
     width: 100%;
-    height: 70vh; /* smaller than full screen to avoid overflow */
-    flex-wrap: nowrap; /* keep side by side */
+    height: 60vh; /* smaller hero height */
+    flex-wrap: nowrap; /* side by side */
+    gap: 0; /* remove any spacing */
 }
 
 .vs-item {
     position: relative;
-    flex: 1; /* each image takes equal width */
+    flex: 1 1 0; /* force equal width */
+    min-width: 0; /* prevent flex overflow */
     overflow: hidden;
     cursor: pointer;
 }
 
 .vs-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* crop to fill container */
+    object-fit: cover; /* fills container */
     display: block;
     transition: transform 0.3s ease;
 }
@@ -25,37 +30,34 @@
     transform: scale(1.05);
 }
 
-/* Overlay centered with semi-transparent background */
+/* Overlay text centered */
 .overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: white;
-    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
     pointer-events: none;
-
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
 }
 
-/* RESPONSIVE: stack images on smaller screens */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
     .beats-hero {
         flex-direction: column;
-        height: auto; /* adapt to content height */
+        height: auto;
     }
 
     .vs-item {
-        height: 40vh; /* smaller height per image */
+        height: 40vh;
     }
 
     .overlay {
-        font-size: 2rem;
-        padding: 0.5rem 1rem;
+        font-size: 1.8rem;
     }
 }
 
