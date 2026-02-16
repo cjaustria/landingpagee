@@ -1,86 +1,304 @@
 /* =======================
-   BEATS PAGE HERO - FULL SCREEN IMAGES
+   GENERAL BODY STYLES
 ======================= */
-
-html, body {
-    height: 100%;
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f4f7f9;
+    color: #1a1a1a;
     margin: 0;
     padding: 0;
+    line-height: 1.8;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
+/* =======================
+   HEADER STYLES (BLOG + BIO)
+======================= */
 header {
-    flex: 0 0 auto; /* header takes natural height */
-}
-
-.beats-hero {
-    flex: 1 0 auto; /* beats hero fills remaining screen height */
-    display: flex;
-    width: 100%;
-    height: calc(100vh - 100px); /* fallback if header height is ~100px */
-}
-
-.vs-grid {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.vs-item {
-    flex: 1; /* each image takes half width */
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    height: 100vh; /* full viewport height minus header accounted by flex */
-}
-
-.vs-item img {
-    width: 100vw;   /* full viewport width for each half */
-    height: 100vh;  /* full viewport height */
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.vs-item:hover img {
-    transform: scale(1.08); /* slightly larger than container */
-}
-
-.overlay {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
+    background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
+    padding: 4rem 1.5rem 3rem;
     text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 0 10px rgba(0,0,0,0.7);
-    pointer-events: none;
+    color: #04395e;
+    border-bottom: none;
 }
 
-/* RESPONSIVE */
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #03588c;
+    line-height: 1.4;
+}
+
+/* =======================
+   SCROLL NAVIGATION BAR
+======================= */
+.scroll-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    background: white;
+    padding: 0.9rem 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.scroll-nav a {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: #03588c;
+    padding: 0.4rem 1.1rem;
+    border-radius: 20px;
+    border: 1.5px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.scroll-nav a:hover {
+    border: 1.5px solid #0288a6;
+    background-color: rgba(2,136,166,0.08);
+}
+
+.scroll-nav a:active {
+    background-color: #0288a6;
+    color: white;
+}
+
+/* =======================
+   MAIN AND ARTICLE STYLES
+======================= */
+main {
+    max-width: 850px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+article p {
+    margin-bottom: 1.8rem;
+    text-align: justify;
+    font-size: 1.12rem;
+}
+
+.dropcap:first-letter {
+    font-size: 3.5rem;
+    float: left;
+    line-height: 1;
+    margin-right: 0.15em;
+    font-weight: 700;
+    color: #03588c;
+}
+
+/* =======================
+   BLOCKQUOTE STYLES
+======================= */
+blockquote {
+    font-style: italic;
+    color: #02577a;
+    border-left: 5px solid #0288a6;
+    background-color: rgba(2, 136, 166, 0.08);
+    padding-left: 1rem;
+    margin: 2.5rem 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* =======================
+   LIST STYLES
+======================= */
+article ul {
+    margin: 2rem 0 2.5rem 1.8rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+article ul li {
+    font-size: 1.08rem;
+    margin-bottom: 0.7rem;
+    color: #04395e;
+}
+
+article ul li::marker {
+    color: #0288a6;
+}
+
+/* =======================
+   BLUE HIGHLIGHT
+======================= */
+.highlight {
+    color: #0288a6;
+}
+
+/* =======================
+   CONCLUSION
+======================= */
+.conclusion {
+    font-style: italic;
+    margin: 2rem 0;
+}
+
+.conclusion-box {
+    background: rgba(2,136,166,0.08);
+    padding: 1.2rem 1.5rem;
+    border-left: 5px solid #0288a6;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+/* =======================
+   BACK TO HOME BUTTON
+======================= */
+.back-home {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.back-home a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0288a6;
+    border: 2px solid #0288a6;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.back-home a:hover {
+    background-color: #0288a6;
+    color: white;
+}
+
+/* =======================
+   FOOTER STYLES
+======================= */
+footer {
+    background-color: #03588c;
+    color: #e0f7fa;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-style: italic;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* =======================
+   FONT OVERRIDES
+======================= */
+h1, blockquote {
+    font-family: 'Playfair Display', serif;
+}
+
+p, .subtitle, li {
+    font-family: 'Georgia', serif;
+}
+
+/* =======================
+   BIO PHOTO LAYOUT
+======================= */
+.bio-section {
+    margin: 3rem 0;
+}
+
+.bio-photo {
+    width: 220px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 1.5rem 1rem 0;
+}
+
+.bio-photo:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+}
+
+.bio-photo.left {
+    float: left;
+}
+
+.bio-photo.right {
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+}
+
+.bio-clear {
+    clear: both;
+}
+
+/* =======================
+   GALLERY
+======================= */
+.gallery-section {
+    margin-bottom: 3rem;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.gallery-grid.row-align {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.gallery-photo {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
 @media (max-width: 768px) {
-    .vs-grid {
-        flex-direction: column;
+    header h1 {
+        font-size: 2rem;
     }
 
-    .vs-item {
-        width: 100vw;
-        height: 50vh; /* half of viewport for each image */
+    article p {
+        font-size: 1rem;
     }
 
-    .vs-item img {
+    blockquote {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .bio-photo {
         width: 100%;
-        height: 100%;
+        float: none;
+        margin: 0 0 1.5rem 0;
     }
 
-    .overlay {
-        font-size: 1.5rem;
-        bottom: 10px;
+    .scroll-nav {
+        flex-wrap: wrap;
+        gap: 0.6rem;
     }
 }
