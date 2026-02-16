@@ -1,178 +1,88 @@
 /* =======================
-   BEATS PAGE
+   BEATS PAGE HERO - TEKKEN VS STYLE
 ======================= */
 
-/* Container for entire page */
-.beats-container {
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-}
-
-/* Local / Foreign selection */
-.selection-grid {
+.beats-hero {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* full screen minus header height */
+    background-color: #f4f7f9;
+    position: relative;
 }
 
-.selection-item {
-    flex: 1;
+.vs-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     position: relative;
-    cursor: pointer;
+}
+
+.vs-item {
+    position: relative;
+    width: 300px;
+    height: 450px;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.selection-item:hover {
-    transform: scale(1.03);
+.vs-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.vs-item:hover img {
+    transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.selection-item img {
-    width: 100%;
-    height: 400px; /* half-screen vertical */
-    object-fit: cover;
-    display: block;
-}
-
-.selection-item .overlay {
+.overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 1rem;
-    background: rgba(2,136,166,0.7);
+    background: rgba(2,136,166,0.8);
     color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 0;
 }
 
-/* Artists Section */
-.artist-section {
-    display: none; /* hidden until clicked */
-    margin-bottom: 3rem;
+.vs-vs {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0288a6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* Artist Card */
-.artist-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-    background: #d0f0fd;
-    border-left: 6px solid #0288a6;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-}
-
-.artist-card img {
-    width: 220px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-}
-
-.artist-info {
-    flex: 1;
-}
-
-.artist-info h2 {
-    margin-top: 0;
-    font-family: 'Playfair Display', serif;
-    color: #03588c;
-}
-
-.artist-info p {
-    margin: 0.5rem 0;
-    font-family: Georgia, serif;
-}
-
-/* Songs Section */
-.song-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    background: white;
-    border: 2px solid #0288a6;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-}
-
-.song-card img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.song-info {
-    flex: 1;
-}
-
-.song-info h3 {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    color: #04395e;
-}
-
-.song-info p {
-    margin: 0.3rem 0;
-    font-family: Georgia, serif;
-}
-
-/* Explicit / Implicit Tag */
-.tag {
-    display: inline-block;
-    padding: 0.2rem 0.5rem;
-    margin-top: 0.2rem;
-    border-radius: 5px;
-    background-color: #0288a6;
-    color: white;
-    font-size: 0.8rem;
-}
-
-/* Responsive YouTube embed */
-.song-info iframe {
-    width: 100%;
-    height: 200px;
-    border-radius: 8px;
-    margin-top: 0.5rem;
-}
-
-/* Responsive */
+/* =======================
+   RESPONSIVE
+======================= */
 @media (max-width: 768px) {
-    .selection-grid {
+    .vs-grid {
         flex-direction: column;
+        gap: 1.5rem;
     }
 
-    .selection-item img {
-        height: 250px;
+    .vs-vs {
+        font-size: 2rem;
+        top: auto;
+        bottom: 50%;
+        transform: translateY(50%);
     }
 
-    .artist-card {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .artist-card img {
-        width: 100%;
-        max-width: 220px;
-    }
-
-    .song-card {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .song-card img, .song-info iframe {
-        width: 100%;
-        max-width: 300px;
+    .vs-item {
+        width: 80%;
+        height: 350px;
     }
 }
-
