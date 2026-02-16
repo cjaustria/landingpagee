@@ -2,21 +2,21 @@
     display: flex;
     width: 100%;
     height: calc(100vh - 120px); /* full screen minus header */
-    flex-wrap: nowrap; /* prevent second image from dropping */
+    flex-wrap: nowrap; /* keep images side by side */
 }
 
 .vs-item {
     position: relative;
-    flex: 1; /* each image takes half width */
+    flex: 1; /* each image takes half the width */
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    min-height: 0; /* prevents flex overflow */
 }
 
 .vs-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* scale image to fill container */
     display: block;
     transition: transform 0.3s ease;
 }
@@ -39,14 +39,14 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .beats-hero {
-        flex-direction: column; /* stack on mobile */
+        flex-direction: column;
         height: auto;
     }
 
     .vs-item {
-        height: 50vh;
+        height: 50vh; /* half viewport height on mobile */
     }
 
     .overlay {
