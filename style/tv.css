@@ -1,221 +1,35 @@
 /* =======================
-   RESET
+   TV Shows Custom CSS
+   (extends movies.css)
 ======================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Georgia', serif;
-    background-color: #f0f8ff;
-}
-
-/* =======================
-   HEADER
-======================= */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
-    color: #04395e;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.header-left h1 {
-    font-family: 'Playfair Display', serif;
-}
-
-.header-left .subtitle {
-    font-style: italic;
-    color: #03588c;
-}
-
-.header-right a {
-    text-decoration: none;
-    color: #04395e;
-    font-weight: bold;
-    margin-left: 1.5rem;
-}
-
-.header-right a:hover {
-    color: #0288a6;
-}
-
-/* =======================
-   GENRE NAV
-======================= */
-.genre-nav {
-    position: sticky;
-    top: 100px;
-    z-index: 998;
+/* CROSS NAV BUTTONS AT THE END */
+.cross-nav {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    background-color: #03588c;
-    padding: 0.8rem;
-    margin: 1rem auto;
+    margin: 2rem auto 3rem auto;
     max-width: 1000px;
-    border-radius: 12px;
 }
 
-.genre-nav a {
-    background: #f0f8ff;
-    color: #0288a6;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-weight: bold;
-}
-
-.genre-nav a:hover {
-    background: #0288a6;
-    color: white;
-}
-
-/* =======================
-   CATEGORY LABEL
-======================= */
-.genre-label {
-    text-align: center;
-    margin: 3rem auto 1.5rem;
-    background-color: #f0f8ff;
-    padding: 1.2rem 0;
-    border-radius: 12px;
-    max-width: 1000px;
-    border: 2px solid #0288a6; /* consistent with beats.css */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.genre-label h2 {
-    font-family: 'Playfair Display', serif;
-    color: #0288a6;
-}
-
-/* =======================
-   SHOW CARD
-======================= */
-.artist-card {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 1.8rem;
-    border: 2px solid #0288a6;
-    border-radius: 14px;
-    background: #d0f0fd;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
-
-.artist-photo {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-}
-
-.artist-info h2 {
-    font-family: 'Playfair Display', serif;
-    color: #03588c;
-    margin-bottom: 0.5rem;
-}
-
-/* =======================
-   QUOTE
-======================= */
-.song-desc {
-    font-style: italic;
-    font-weight: bold;
-    background: #03588c;
-    color: white;
-    padding: 0.9rem 1rem;
-    border-left: 6px solid #0288a6;
-    border-radius: 8px;
-    margin-bottom: 1.2rem;
-}
-
-/* =======================
-   VIDEO
-======================= */
-iframe {
-    width: 100%;
-    height: 315px;
-    border-radius: 12px;
-    margin-bottom: 1.2rem;
-}
-
-/* =======================
-   SIDE IMAGES
-======================= */
-.songs-grid {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-}
-
-.songs-grid img {
-    width: 300px;
-    height: 200px;
-    object-fit: contain;
-    background: white;
-    padding: 8px;
-    border-radius: 10px;
-    border: 2px solid #0288a6;
-}
-
-/* =======================
-   BACK TO TOP
-======================= */
-.back-top {
-    text-align: center;
-    margin: 2rem 0 3rem;
-}
-
-.back-top a {
+.cross-nav .cross-btn {
     text-decoration: none;
     font-weight: bold;
-    color: #0288a6;
-    border: 2px solid #0288a6;
+    color: white;
+    background-color: #0288a6;
     padding: 0.6rem 1.2rem;
     border-radius: 25px;
+    transition: 0.3s ease;
 }
 
-.back-top a:hover {
-    background: #0288a6;
-    color: white;
+.cross-nav .cross-btn:hover {
+    background-color: #03588c;
 }
 
-/* =======================
-   RESPONSIVE
-======================= */
-@media (max-width: 1024px) {
-    .songs-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .songs-grid img {
-        width: 90%;
-        height: auto;
-    }
-
-    .genre-nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
+/* RESPONSIVE: stack cross buttons on small screens */
 @media (max-width: 600px) {
-    iframe {
-        height: 220px;
+    .cross-nav {
+        flex-direction: column;
+        gap: 0.6rem;
     }
 }
