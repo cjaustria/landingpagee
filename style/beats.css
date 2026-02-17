@@ -46,7 +46,6 @@ header {
     color: #03588c;
 }
 
-
 .header-right a {
     text-decoration: none;
     color: #04395e;
@@ -59,7 +58,7 @@ header {
 }
 
 /* =======================
-   FULL SCREEN HERO SELECTION (beats.html)
+   FULL SCREEN HERO SELECTION
 ======================= */
 .selection-grid {
     display: flex;
@@ -102,7 +101,7 @@ header {
 }
 
 /* =======================
-   ARTISTS SECTION (local.html & foreign.html)
+   ARTISTS SECTION (LOCAL / FOREIGN)
 ======================= */
 .artist-card {
     display: flex;
@@ -188,7 +187,7 @@ header {
 }
 
 /* =======================
-   SONG DESCRIPTION (new)
+   SONG DESCRIPTION
 ======================= */
 .song-desc {
     font-size: 0.9rem;
@@ -206,12 +205,12 @@ header {
 }
 
 /* =======================
-   GENRE NAVIGATION BAR (new)
+   GENRE NAVIGATION BAR
 ======================= */
 .genre-nav {
     position: sticky;
-    top: 100px; /* set to approx header height */
-    z-index: 999; /* same as header or slightly less if you want it under */
+    top: 100px;
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,7 +219,7 @@ header {
     padding: 0.8rem 1rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 12px;
-    margin: 1rem auto; /* small spacing from header */
+    margin: 1rem auto;
     max-width: 1000px;
 }
 
@@ -240,7 +239,7 @@ header {
 }
 
 /* =======================
-   GENRE LABEL (e.g., Indie)
+   GENRE LABEL
 ======================= */
 .genre-label {
     text-align: center;
@@ -258,29 +257,26 @@ header {
 }
 
 /* =======================
-   BOTTOM DISCOVER FOREIGN
+   CROSS NAV BUTTONS (MOVIES / TV SHOWS)
 ======================= */
-.discover-foreign {
-    text-align: center;
-    margin: 2rem 0 3rem;
+.cross-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
 }
 
-.discover-foreign p {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.button-foreign {
+.cross-nav .cross-btn {
     text-decoration: none;
     font-weight: bold;
     color: white;
     background-color: #0288a6;
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.4rem;
     border-radius: 25px;
     transition: 0.3s ease;
 }
 
-.button-foreign:hover {
+.cross-nav .cross-btn:hover {
     background-color: #03588c;
 }
 
