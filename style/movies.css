@@ -174,3 +174,25 @@ iframe {
     background: #0288a6;
     color: white;
 }
+
+/* CROSS NAV BUTTONS */
+.cross-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.cross-nav .cross-btn {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #0288a6;
+    padding: 0.7rem 1.4rem;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.cross-nav .cross-btn:hover {
+    background-color: #03588c;
+}
