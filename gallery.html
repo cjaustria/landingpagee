@@ -2,132 +2,202 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gallery – Austria Literature</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.css">
+  <title>Gallery – Christian Austria</title>
+  <link rel="stylesheet" href="style/gallery.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="top">
 
 <header>
-  <h1>Gallery</h1>
-  <p class="subtitle">A visual archive of my landing page, biography, and blog moments.</p>
-
-  <div class="scroll-nav">
-    <a href="#landing">Landing Page</a>
-    <a href="#bio">Biography</a>
-    <a href="#blogs">Blogs</a>
+  <div class="header-left">
+    <h1>Gallery</h1>
+    <span class="subtitle">A Visual Voyage Through Every Chapter of Life</span>
+  </div>
+  <div class="header-right">
+        <a href="index.html">Home</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="media.html">Media</a>
+        <a href="dreamplaces.html">Dream Places</a>
+        <a href="bucketlist.html">Bucket List</a>
   </div>
 </header>
 
+<!-- GENRE NAV -->
+<nav class="genre-nav">
+  <a href="#landing">Landing Page</a>
+  <a href="#bio">Biography</a>
+  <a href="#diskarte">From Diskarte to Dependency</a>
+  <a href="#machiavelli">The Way of Machiavelli</a>
+  <a href="#leaders">The Man Who Sits with Everybody</a>
+</nav>
+
 <main>
+  <article>
 
-  <!-- LANDING PAGE PHOTOS -->
-  <section id="landing" class="gallery-section">
-    <h2>Landing Page Photos</h2>
-    <div class="gallery-grid">
-      <a href="images/intropic.jpg" target="_self">
-        <figure>
-          <img src="images/intropic.jpg" alt="Landing Page Photo" class="gallery-photo">
-          <figcaption>My current self — where I am today</figcaption>
-        </figure>
-      </a>
+    <!-- LANDING PAGE -->
+    <section id="landing" class="gallery-section">
+      <div class="genre-label"><h2>Landing Page</h2></div>
+      <div class="gallery-grid">
+        <a href="images/landing/landing1.jpg" target="_view" title="After a workout at the gym, wearing my Superman Drifit attire">
+          <img src="images/landing/landing1.jpg" alt="Photo 1" class="gallery-photo">
+        </a>
+        <a href="images/landing/landing2.jpg" target="_view" title="New Year’s Eve while unwell, wearing a protective mask">
+          <img src="images/landing/landing2.jpg" alt="Photo 2" class="gallery-photo">
+        </a>
+        <a href="images/landing/landing3.jpg" target="_view" title="After finishing at Starbucks, collecting stamps; now with my tumbler">
+          <img src="images/landing/landing3.jpg" alt="Photo 3" class="gallery-photo">
+        </a>
+        <a href="images/landing/landing4.jpg" target="_view" title="Focused studying at school">
+          <img src="images/landing/landing4.jpg" alt="Photo 4" class="gallery-photo">
+        </a>
+        <a href="images/landing/landing5.jpg" target="_view" title="At the gym, flexing and demonstrating strength">
+          <img src="images/landing/landing5.jpg" alt="Photo 5" class="gallery-photo">
+        </a>
+      </div>
+    <div class="nav-buttons">
+        <a href="#top">Back to Top</a>
     </div>
-  </section>
+    </section>
 
-  <!-- BIOGRAPHY PHOTOS -->
-  <section id="bio" class="gallery-section">
-    <h2>Biography Photos</h2>
+    <!-- BIOGRAPHY -->
+    <!-- BIOGRAPHY SECTION -->
+<div class="genre-label">
+    <h2>Biography</h2>
+</div>
 
+<!-- CHILDHOOD -->
+<div class="sub-category-title">
     <h3>Childhood</h3>
-    <div class="gallery-grid">
-      <a href="images/childhood.jpg" target="_self">
-        <figure>
-          <img src="images/childhood.jpg" alt="Childhood" class="gallery-photo">
-          <figcaption>A glimpse of my early years and beginnings</figcaption>
-        </figure>
-      </a>
-    </div>
+</div>
+<div class="gallery-grid">
+    <a href="images/bio/childhood1.jpg" target="_view" title="At a Christmas party with my classmates">
+        <img src="images/bio/childhood1.jpg" alt="Christmas party with classmates" class="gallery-photo">
+    </a>
+    <a href="images/bio/childhood2.jpg" target="_view" title="Happily embracing my mother">
+        <img src="images/bio/childhood2.jpg" alt="Hugging mother" class="gallery-photo">
+    </a>
+    <a href="images/bio/childhood3.jpg" target="_view" title="Selfie with my older brother">
+        <img src="images/bio/childhood3.jpg" alt="Selfie with older brother" class="gallery-photo">
+    </a>
+</div>
 
+
+<!-- TEENAGE -->
+<div class="sub-category-title">
     <h3>Teenage</h3>
-    <div class="gallery-grid">
-      <a href="images/teenage.jpg" target="_self">
-        <figure>
-          <img src="images/teenage.jpg" alt="Teenage" class="gallery-photo">
-          <figcaption>The years of growth, curiosity, and self-discovery</figcaption>
-        </figure>
-      </a>
-    </div>
+</div>
+<div class="gallery-grid">
+    <a href="images/bio/teenage1.jpg" target="_view" title="At the cinema in a mall">
+        <img src="images/bio/teenage1.jpg" alt="Cinema visit at a mall" class="gallery-photo">
+    </a>
+    <a href="images/bio/teenage2.jpg" target="_view" title="At a money exchange counter">
+        <img src="images/bio/teenage2.jpg" alt="Visiting a money exchange" class="gallery-photo">
+    </a>
+    <a href="images/bio/teenage3.jpg" target="_view" title="Wearing a popular character helmet from Toysrus">
+        <img src="images/bio/teenage3.jpg" alt="Wearing a Toysrus character helmet" class="gallery-photo">
+    </a>
+</div>
 
+
+<!-- COLLEGE -->
+<div class="sub-category-title">
     <h3>College</h3>
-    <div class="gallery-grid">
-      <a href="images/college.jpg" target="_self">
-        <figure>
-          <img src="images/college.jpg" alt="College" class="gallery-photo">
-          <figcaption>College life — learning, challenges, and transformation</figcaption>
-        </figure>
-      </a>
-    </div>
-  </section>
-
-  <!-- BLOG PHOTOS -->
-  <section id="blogs" class="gallery-section">
-    <h2>Blog Photos</h2>
-
-    <h3>From Diskarte to Dependency</h3>
-    <div class="gallery-grid row-align">
-      <a href="images/aibrain.jpg" target="_self">
-        <figure>
-          <img src="images/aibrain.jpg" alt="From Diskarte to Dependency" class="gallery-photo">
-          <figcaption>The evolving relationship between humans and AI</figcaption>
-        </figure>
-      </a>
+</div>
+<div class="gallery-grid">
+    <a href="images/bio/college1.jpg" target="_view" title="Walking to eat with classmates in a vacant area">
+        <img src="images/bio/college1.jpg" alt="Walking to eat with classmates" class="gallery-photo">
+    </a>
+    <a href="images/bio/college2.jpg" target="_view" title="Reading a book">
+        <img src="images/bio/college2.jpg" alt="Reading a book" class="gallery-photo">
+    </a>
+    <a href="images/bio/college3.jpg" target="_view" title="Having fun with classmates">
+        <img src="images/bio/college3.jpg" alt="Fun moments with classmates" class="gallery-photo">
+    </a>
+</div>
+    <div class="nav-buttons">
+      <a href="#top">Back to Top</a>
     </div>
 
-    <h3>The Way of Machiavelli</h3>
-    <div class="gallery-grid row-align">
-      <a href="images/machia.jpeg" target="_self">
-        <figure>
-          <img src="images/machia.jpeg" alt="The Way of Machiavelli" class="gallery-photo">
-          <figcaption>Power, strategy, and political realism</figcaption>
-        </figure>
-      </a>
-    </div>
+    <!-- FROM DISKARTE TO DEPENDENCY -->
+    <section id="diskarte" class="gallery-section">
+      <div class="genre-label"><h2>From Diskarte to Dependency</h2></div>
+      <div class="gallery-grid">
+        <a href="images/blogs/ai1.jpg" target="_view" title="Human hand holding a ChatGPT interface">
+          <img src="images/blogs/ai1.jpg" alt="AI hand" class="gallery-photo">
+        </a>
+        <a href="images/blogs/ai2.jpg" target="_view" title="Brain integrated with a microprocessor, symbolizing AI cognition">
+          <img src="images/blogs/ai2.jpg" alt="AI brain" class="gallery-photo">
+        </a>
+        <a href="images/blogs/ai3.jpg" target="_view" title="Human and robotic hands reaching together">
+          <img src="images/blogs/ai3.jpg" alt="Human and robot hands" class="gallery-photo">
+        </a>
+        <a href="images/blogs/ai4.jpg" target="_view" title="Child thoughtfully reflecting in a classroom">
+          <img src="images/blogs/ai4.jpg" alt="Kid thinking" class="gallery-photo">
+        </a>
+        <a href="images/blogs/ai5.jpg" target="_view" title="Human brain illuminated, representing neural activity">
+          <img src="images/blogs/ai5.jpg" alt="Brain activity" class="gallery-photo">
+        </a>
+      </div>
+      <div class="nav-buttons">
+        <a href="#top">Back to Top</a>
+      </div>
+    </section>
 
-    <h3>The Man Who Sits with Everybody</h3>
-    <div class="gallery-grid row-align">
-      <a href="images/eatlast.jpg" target="_self">
-        <figure>
-          <img src="images/eatlast.jpg" alt="Leaders Eat Last" class="gallery-photo">
-          <figcaption>Leaders Eat Last — leadership built on trust</figcaption>
-        </figure>
-      </a>
+    <!-- THE WAY OF MACHIAVELLI -->
+    <section id="machiavelli" class="gallery-section">
+      <div class="genre-label"><h2>The Way of Machiavelli</h2></div>
+      <div class="gallery-grid">
+        <a href="images/blogs/corrupt1.jpg" target="_view" title="Niccolò Machiavelli">
+          <img src="images/blogs/corrupt1.jpg" alt="Machiavelli" class="gallery-photo">
+        </a>
+        <a href="images/blogs/corrupt2.jpg" target="_view" title="Epictetus">
+          <img src="images/blogs/corrupt2.jpg" alt="Epictetus" class="gallery-photo">
+        </a>
+        <a href="images/blogs/corrupt3.jpg" target="_view" title="Marcus Aurelius">
+          <img src="images/blogs/corrupt3.jpg" alt="Marcus Aurelius" class="gallery-photo">
+        </a>
+        <a href="images/blogs/corrupt4.jpg" target="_view" title="Seneca">
+          <img src="images/blogs/corrupt4.jpg" alt="Seneca" class="gallery-photo">
+        </a>
+        <a href="images/blogs/corrupt5.jpeg" target="_view" title="Zeno of Citium">
+          <img src="images/blogs/corrupt5.jpeg" alt="Zeno of Citium" class="gallery-photo">
+        </a>
+      </div>
+      <div class="nav-buttons">
+        <a href="#top">Back to Top</a>
+      </div>
+    </section>
 
-      <a href="images/atomic.jpg" target="_self">
-        <figure>
-          <img src="images/atomic.jpg" alt="Atomic Habits" class="gallery-photo">
-          <figcaption>Atomic Habits — small changes, remarkable results</figcaption>
-        </figure>
-      </a>
+    <!-- THE MAN WHO SITS WITH EVERYBODY -->
+    <section id="leaders" class="gallery-section">
+      <div class="genre-label"><h2>The Man Who Sits with Everybody</h2></div>
+      <div class="gallery-grid">
+        <a href="images/blogs/leader1.jpg" target="_view" title="Simon Sinek portrait with blue background">
+          <img src="images/blogs/leader1.jpg" alt="Simon Sinek" class="gallery-photo">
+        </a>
+        <a href="images/blogs/leader2.jpg" target="_view" title="James Clear speaking at a conference">
+          <img src="images/blogs/leader2.jpg" alt="James Clear" class="gallery-photo">
+        </a>
+        <a href="images/blogs/leader3.jpg" target="_view" title="Stephen Covey smiling">
+          <img src="images/blogs/leader3.jpg" alt="Stephen Covey" class="gallery-photo">
+        </a>
+        <a href="images/blogs/leader4.jpg" target="_view" title="Aragorn as King from The Lord of the Rings">
+          <img src="images/blogs/leader4.jpg" alt="Aragorn" class="gallery-photo">
+        </a>
+        <a href="images/blogs/leader5.jpg" target="_view" title="Optimus Prime holding a sword">
+          <img src="images/blogs/leader5.jpg" alt="Optimus Prime" class="gallery-photo">
+        </a>
+      </div>
+      <div class="nav-buttons">
+        <a href="#top">Back to Top</a>
+      </div>
+    </section>
 
-      <a href="images/highly.jpg" target="_self">
-        <figure>
-          <img src="images/highly.jpg" alt="Highly Effective People" class="gallery-photo">
-          <figcaption>The 7 Habits of Highly Effective People</figcaption>
-        </figure>
-      </a>
-    </div>
-  </section>
-
-  <div class="back-home">
-    <a href="index.html">← Back to Home</a>
-  </div>
-
+  </article>
 </main>
 
-<footer>
-  <p>&copy; 2026 Austria Literature</p>
-</footer>
 
 </body>
 </html>
