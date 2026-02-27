@@ -16,34 +16,91 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 2rem;   /* exact same as blogs */
     background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
     color: #04395e;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: auto;           /* don't force extra height */
 }
 
 .header-left h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.8rem;  /* same as blog headers */
     margin: 0;
 }
 
 .header-left .subtitle {
-    font-size: 1rem;
+    display: block;
     font-style: italic;
-    margin-top: 0.3rem;
     color: #03588c;
+    margin: -0.4rem 0 0 0;  /* lift subtitle slightly closer to h1 */
+    font-size: 1rem;        /* same as blog subtitle */
 }
 
 .header-right a {
     text-decoration: none;
     color: #04395e;
     font-weight: bold;
-    margin-left: 2rem;
-    transition: 0.3s ease;
+    margin-left: 1.5rem;
 }
 
 .header-right a:hover {
+    color: #0288a6;
+}
+
+/* =======================
+   GENRE NAV (from movies.css)
+======================= */
+.genre-nav {
+    position: sticky;
+    top: 120px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #024b70;
+    padding: 0.8rem;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;      /* ensures padding doesn't add width */
+    overflow: hidden;             /* hide any accidental overflow */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;           /* prevent any horizontal scroll */
+}
+
+/* GENRE NAV LINKS */
+.genre-nav a {
+    background: #f0f8ff;
+    color: #0288a6;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.genre-nav a:hover {
+    background: #0288a6;
+    color: white;
+}
+
+/* OPTIONAL: GENRE LABEL / SECTION HEADER */
+.genre-label {
+    text-align: center;
+    margin: 2.5rem 0 1rem;
+    background-color: #dfeefc;
+    padding: 1rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.genre-label h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
     color: #0288a6;
 }
 
@@ -89,12 +146,158 @@ header {
     margin: 0 auto;
 }
 
+/* =======================
+   VIDEO HERO SECTION
+======================= */
+.video-hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0; /* spacing above and below */
+}
+
+.video-hero video {
+    width: 80%;            /* smaller than full width */
+    max-width: 800px;      /* keeps it elegant on large screens */
+    height: auto;          /* maintain aspect ratio */
+    border: 4px solid #0288a6; /* subtle border matching theme */
+    border-radius: 12px;   /* rounded corners for style */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* soft shadow */
+    display: block;
+}
+
+/* Overlay content */
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f4f7f9;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.video-overlay h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #e0f7fa;
+}
+
+.video-overlay p {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: #cdeefb;
+}
+
+/* CTA Button */
+.video-btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: #0288a6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.video-btn:hover {
+    background-color: #03588c;
+    transform: translateY(-2px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .video-hero {
+        height: 60vh;
+    }
+
+    .video-overlay h2 {
+        font-size: 2.2rem;
+    }
+
+    .video-overlay p {
+        font-size: 1.1rem;
+    }
+}
+
+
 /* INTRO */
 .intro {
     background-color: #e0f7fa;
     margin: 2rem;
     padding: 2.5rem 3rem;
     border-radius: 12px;
+}
+
+.photo-gallery {
+    max-width: 1000px; /* container slightly wider */
+    margin: 3rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.photo-gallery h2 {
+    font-family: 'Playfair Display', serif;
+    color: #03588c;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* portrait columns */
+    gap: 1.2rem;
+    justify-items: center;
+    margin-bottom: 2rem; /* space before the button */
+}
+
+.gallery-grid img {
+    width: 160px;   /* portrait width */
+    height: 240px;  /* portrait height */
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15); /* subtle shadow */
+    cursor: pointer;
+}
+
+.photo-gallery .gallery-btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background-color: #0288a6;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.photo-gallery .gallery-btn:hover {
+    background-color: #03588c;
+}
+
+
+/* =======================
+   INLINE BUTTON (Biography Link)
+======================= */
+.button-inline {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #0288a6;   /* matches your other buttons */
+    padding: 0.3rem 0.8rem;       /* small to fit inline text */
+    border-radius: 20px;          /* pill shape */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.95rem;           /* matches paragraph text */
+    margin: 0 0.25rem;            /* small left/right spacing */
+}
+
+.button-inline:hover {
+    background-color: #03588c;    /* darker blue on hover */
+    transform: translateY(-1px);  /* subtle lift effect */
 }
 
 /* SECTIONS */
@@ -127,14 +330,13 @@ header {
     flex-direction: column;
     justify-content: space-between;
     min-height: 160px;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Better hover contrast */
 .interesting-item:hover {
-    background-color: #03588c; /* darker blue */
-    color: #ffffff;
-    transform: translateY(-5px);
+    background-color: #03588c; 
+    color: #ffffff;            
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12); /* smooth shadow */
 }
 
 .interesting-item h3 {
@@ -149,18 +351,40 @@ header {
     padding: 1.5rem 1.8rem;
     margin: 1.8rem 0;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12); /* smooth shadow only */
 }
 
 .blog-card a {
     color: #0288a6;
     font-weight: bold;
     text-decoration: none;
+}
+
+/* =======================
+   BACK TO TOP BUTTON
+======================= */
+.back-top {
+    display: flex;
+    justify-content: center;  /* centers the button horizontally */
+    margin: 3rem 0;
+}
+
+.back-top a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #0288a6;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.back-top a:hover {
+    background-color: #03588c;
 }
 
 /* FOOTER */
