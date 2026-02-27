@@ -16,7 +16,7 @@ body {
 }
 
 /* =======================
-   STICKY HEADER
+   MAIN NAV (HEADER)
 ======================= */
 header {
     position: sticky;
@@ -31,17 +31,11 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.header-left {
-    text-align: left;
-}
-
 .header-left h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
 }
 
 .header-left .subtitle {
-    font-size: 1rem;
     font-style: italic;
     color: #03588c;
 }
@@ -81,9 +75,6 @@ header {
     transition: transform 0.3s ease;
 }
 
-.selection-item:hover img {
-    transform: scale(1.05);
-}
 
 .selection-item .overlay {
     position: absolute;
@@ -159,7 +150,8 @@ header {
 }
 
 .song-card:hover {
-    transform: translateY(-5px);
+    /* no transform to avoid jump */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .song-card img {
@@ -208,29 +200,27 @@ header {
    GENRE NAVIGATION BAR
 ======================= */
 .genre-nav {
-    position: sticky;
-    top: 100px;
-    z-index: 999;
+    position: sticky; /* follows scroll */
+    top: 96px;        /* slightly below header (previous 88px) */
+    z-index: 1000;    /* above header layer */
+
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 1rem;
-    background-color: #03588c;
-    padding: 0.8rem 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 12px;
-    margin: 1rem auto;
-    max-width: 1000px;
+    background-color: #024b70;
+    padding: 0.8rem;
+    margin: 0;
+    width: 100%;
 }
 
+/* GENRE NAV LINKS */
 .genre-nav a {
-    text-decoration: none;
-    font-weight: bold;
+    background: #f0f8ff;
     color: #0288a6;
+    text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 25px;
-    transition: 0.3s ease;
-    background-color: #f0f8ff;
+    font-weight: bold;
 }
 
 .genre-nav a:hover {
@@ -244,7 +234,7 @@ header {
 .genre-label {
     text-align: center;
     margin: 2.5rem 0 1rem;
-    background-color: #f0f8ff;
+    background-color: #dfeefc;
     padding: 1rem 0;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -283,26 +273,59 @@ header {
 /* =======================
    BACK TO TOP BUTTON
 ======================= */
+/* =======================
+   BACK TO TOP BUTTON (STYLE.CSS CONSISTENT)
+======================= */
 .back-top {
-    display: block;
-    width: max-content;
-    margin: 3rem auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;  /* center the button horizontally */
+    margin: 3rem 0;
 }
 
 .back-top a {
     text-decoration: none;
     font-weight: bold;
-    color: #0288a6;
-    border: 2px solid #0288a6;
-    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #0288a6;
+    padding: 0.6rem 1.2rem;
     border-radius: 25px;
     transition: 0.3s ease;
 }
 
 .back-top a:hover {
-    background-color: #0288a6;
+    background-color: #03588c;
+}
+
+/* =======================
+   DISCOVER FOREIGN BUTTON
+======================= */
+.discover-foreign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+    text-align: center;
+    gap: 1rem;
+}
+
+.discover-foreign p {
+    font-size: 1.1rem;
+    color: #03588c;
+    font-style: italic;
+}
+
+.discover-foreign .button-foreign {
+    text-decoration: none;
+    font-weight: bold;
     color: white;
+    background-color: #0288a6;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.discover-foreign .button-foreign:hover {
+    background-color: #03588c;
 }
 
 /* =======================
