@@ -1,0 +1,112 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f0f8ff;
+    overflow-x: hidden;
+}
+
+/* =======================
+   MAIN NAV (HEADER)
+======================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
+    color: #04395e;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header-left h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+.header-left .subtitle {
+    font-style: italic;
+    color: #03588c;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: #04395e;
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+
+.header-right a:hover {
+    color: #0288a6;
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1000px;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* MEDIA CARD STYLE (like beats card) */
+.media-card {
+    background-color: #ffffff;
+    border: 2px solid #0288a6;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-5px);
+}
+
+.media-card h2 {
+    font-family: 'Playfair Display', serif;
+    color: #0288a6;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.media-card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* BUTTON STYLE */
+.media-button {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #0288a6;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.media-button:hover {
+    background-color: #03588c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-left h1 {
+        font-size: 1.8rem;
+    }
+
+    .media-card {
+        padding: 1.5rem;
+    }
+}
