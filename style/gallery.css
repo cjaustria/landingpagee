@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f0f8ff;
+    color: #1a1a1a;
+    line-height: 1.7;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
+    color: #04395e;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 1.2;  /* ensures tight spacing */
+}
+
+.header-left .subtitle {
+    display: block;
+    font-style: italic;
+    color: #03588c;
+    font-size: 1rem;
+    margin-top: 0.2rem;  /* very small gap below h1 */
+    line-height: 1.2;    /* keeps subtitle tight */
+}
+
+.header-right a {
+    text-decoration: none;
+    color: #04395e;
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+
+.header-right a:hover {
+    color: #0288a6;
+}
+
+/* =======================
+   GENRE NAV
+======================= */
+.genre-nav {
+    position: sticky;
+    top: 96px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    background-color: #024b70;
+    padding: 0.8rem 1rem;
+}
+
+.genre-nav a {
+    background: #f0f8ff;
+    color: #0288a6;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.genre-nav a:hover {
+    background: #0288a6;
+    color: white;
+}
+
+/* =======================
+   GENRE LABEL
+======================= */
+.genre-label {
+    text-align: center;
+    margin: 2.5rem 0 1rem;
+    background-color: #dfeefc;
+    padding: 1rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.genre-label h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #0288a6;
+}
+
+/* CATEGORY TITLE */
+.category-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #0288a6;
+    margin: 3rem 0 1rem;
+    position: relative;
+}
+
+.category-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0288a6, #81d4fa);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* SUB-CATEGORY TITLES */
+.sub-category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #03588c;
+    margin: 2.5rem 0 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.sub-category-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #81d4fa, #0288a6);
+    margin: 0.3rem auto 0;
+    border-radius: 2px;
+}
+
+
+
+/* =======================
+   GALLERY GRID
+======================= */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gallery-grid a {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* GALLERY PHOTOS */
+.gallery-photo {
+    width: 220px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    transition: box-shadow 0.3s ease;
+}
+
+.gallery-photo:hover {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+/* =======================
+   BACK TO TOP BUTTONS
+======================= */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 3rem;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0288a6;
+    border: 2px solid #0288a6;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.nav-buttons a:hover {
+    background-color: #0288a6;
+    color: white;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    background-color: #03588c;
+    color: #e0f7fa;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-style: italic;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-left h1 {
+        font-size: 1.6rem;
+    }
+
+    .genre-nav {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .gallery-photo {
+        width: 160px;
+        height: 180px;
+    }
+
+    .genre-label h2 {
+        font-size: 1.6rem;
+    }
+}
