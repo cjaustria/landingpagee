@@ -49,19 +49,20 @@ header {
 
 /* GENRE NAV */
 .genre-nav {
-    position: sticky;
-    top: 100px;
-    z-index: 998;
+    position: sticky; /* follows scroll */
+    top: 96px;        /* slightly below header (previous 88px) */
+    z-index: 1000;    /* above header layer */
+
     display: flex;
     justify-content: center;
     gap: 1rem;
-    background-color: #03588c;
+    background-color: #024b70;
     padding: 0.8rem;
-    margin: 1rem auto;
-    max-width: 1000px;
-    border-radius: 12px;
+    margin: 0;
+    width: 100%;
 }
 
+/* GENRE NAV LINKS */
 .genre-nav a {
     background: #f0f8ff;
     color: #0288a6;
@@ -77,19 +78,21 @@ header {
 }
 
 /* CATEGORY RECTANGLE */
+/* =======================
+   GENRE LABEL
+======================= */
 .genre-label {
     text-align: center;
-    margin: 3rem auto 1.5rem;
-    background-color: #f0f8ff;
-    padding: 1.2rem 0;
+    margin: 2.5rem 0 1rem;
+    background-color: #dfeefc;
+    padding: 1rem 0;
     border-radius: 12px;
-    max-width: 1000px;
-    border: 2px solid #0288a6;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .genre-label h2 {
     font-family: 'Playfair Display', serif;
+    font-size: 2rem;
     color: #0288a6;
 }
 
