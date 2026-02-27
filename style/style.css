@@ -13,28 +13,86 @@ body {
 /* =======================
    HEADER STYLES (BLOG + BIO)
 ======================= */
+/* =======================
+   HEADER STYLES (BLOG + BIO)
+======================= */
+/* =======================
+   HEADER (compact like movies.css)
+======================= */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem; /* smaller vertical padding */
     background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
-    padding: 4rem 1.5rem 3rem;
-    text-align: center;
     color: #04395e;
-    border-bottom: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: auto; /* don’t force extra height */
+    
 }
 
-header h1 {
+.header-left h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 0.8rem;
-    font-weight: 700;
+    font-size: 1.6rem; /* smaller than before */
+    margin: 0;
 }
 
-header .subtitle {
-    font-size: 1.1rem;
+.header-left .subtitle {
+    display: block;
     font-style: italic;
-    max-width: 600px;
-    margin: 0 auto;
     color: #03588c;
-    line-height: 1.4;
+    margin: -0.2rem 0 0 0; /* lift subtitle closer to h1 */
+    font-size: 1rem;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: #04395e;
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+
+.header-right a:hover {
+    color: #0288a6;
+}
+
+/* =======================
+   GENRE NAV (CENTERED)
+======================= */
+.genre-nav {
+    position: sticky;      /* stays visible when scrolling */
+    top: 96px;             /* below header */
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;       /* wrap items on smaller screens */
+    gap: 0.6rem;           /* smaller gap for mobile-friendliness */
+    
+    background-color: #024b70;
+    padding: 0.8rem 1rem;  /* horizontal padding included */
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box; /* ensures padding doesn’t add width */
+    overflow: hidden;       /* prevents accidental scroll */
+}
+
+/* GENRE NAV LINKS */
+.genre-nav a {
+    background: #f0f8ff;
+    color: #0288a6;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.genre-nav a:hover {
+    background: #0288a6;
+    color: white;
 }
 
 /* =======================
@@ -157,24 +215,64 @@ article ul li::marker {
 /* =======================
    BACK TO HOME BUTTON
 ======================= */
-.back-home {
-    text-align: center;
+/* =======================
+   BACK TO TOP BUTTON
+======================= */
+.back-top {
+    display: flex;
+    justify-content: center;  /* center the button horizontally */
     margin: 3rem 0;
 }
 
-.back-home a {
+.back-top a {
     text-decoration: none;
     font-weight: bold;
-    color: #0288a6;
-    border: 2px solid #0288a6;
-    padding: 0.6rem 1.5rem;
+    color: white;
+    background-color: #0288a6;
+    padding: 0.6rem 1.2rem;
     border-radius: 25px;
     transition: 0.3s ease;
 }
 
-.back-home a:hover {
-    background-color: #0288a6;
+.back-top a:hover {
+    background-color: #03588c;
+}
+
+@media (max-width: 600px) {
+    .back-top {
+        flex-direction: row;
+    }
+}
+
+/* =======================
+   HORIZONTAL PREV / BACK TO TOP / NEXT BUTTONS
+======================= */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    font-weight: bold;
     color: white;
+    background-color: #0288a6;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.nav-buttons a:hover {
+    background-color: #03588c;
+}
+
+@media (max-width: 600px) {
+    .nav-buttons {
+        flex-direction: row;
+        gap: 0.6rem;
+    }
 }
 
 /* =======================
@@ -203,71 +301,62 @@ p, .subtitle, li {
     font-family: 'Georgia', serif;
 }
 
-/* =======================
-   BIO PHOTO LAYOUT
-======================= */
-.bio-section {
-    margin: 3rem 0;
-}
-
-.bio-photo {
-    width: 220px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 1.5rem 1rem 0;
-}
-
-.bio-photo:hover {
-    transform: scale(1.04);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.28);
-}
-
-.bio-photo.left {
-    float: left;
-}
-
-.bio-photo.right {
-    float: right;
-    margin: 0 0 1rem 1.5rem;
-}
-
-.bio-clear {
-    clear: both;
-}
 
 /* =======================
-   GALLERY
+   BIOGRAPHY GALLERY STYLES (CENTERED, NO HEADING)
 ======================= */
-.gallery-section {
-    margin-bottom: 3rem;
-}
+
+/* =======================
+   SIMPLE CENTERED BIO GALLERY
+   Hover: only shadow, no zoom, no text
+======================= */
+
+/* =======================
+   SIMPLE CENTERED BIO GALLERY
+   Hover: only shadow, no zoom, no text
+======================= */
 
 .gallery-grid {
     display: flex;
-    gap: 1.2rem;
     flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; /* center the images */
+    margin-top: 1.5rem;
 }
 
+.gallery-grid a {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* =======================
+   LEADERS GALLERY PHOTOS
+======================= */
+.gallery-photo {
+    width: 220px;           /* keeps fixed width */
+    height: 250px;          /* taller height for more vertical space */
+    object-fit: cover;      /* crop without distortion */
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    transition: box-shadow 0.3s ease;  /* only shadow on hover */
+}
+
+.gallery-photo:hover {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25); /* subtle hover shadow */
+}
+
+/* Remove any overlay text completely */
+.gallery-grid a::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Optional: horizontal scrolling row (if you use .row-align) */
 .gallery-grid.row-align {
     flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: 1rem;
-}
-
-.gallery-photo {
-    width: 180px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
 /* =======================
@@ -298,6 +387,11 @@ p, .subtitle, li {
     }
 
     .scroll-nav {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .genre-nav {
         flex-wrap: wrap;
         gap: 0.6rem;
     }
