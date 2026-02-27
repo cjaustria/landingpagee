@@ -1,0 +1,235 @@
+/* =======================
+   RESET
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =======================
+   BODY
+======================= */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f0f8ff;
+    color: #04395e;
+    overflow-x: hidden;
+}
+
+/* =======================
+   MAIN NAV (HEADER)
+======================= */
+/* =======================
+   MAIN NAV (HEADER)
+======================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
+    color: #04395e;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* =======================
+   HEADER TITLE & SUBTITLE HORIZONTAL
+======================= */
+
+.header-left {
+    display: flex;
+    flex-direction: column;   /* vertical stack */
+    align-items: flex-start;  /* left-align both */
+    gap: 0.3rem;              /* small space between title and subtitle */
+}
+
+.header-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-left .subtitle {
+    font-style: italic;
+    color: #03588c;
+    margin: -0.9rem 0 0 0;  /* lift subtitle slightly */
+    font-size: 1rem;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: #04395e;
+    font-weight: bold;
+    margin-left: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.header-right a:hover {
+    color: #0288a6;
+}
+
+/* =======================
+   GENRE NAVIGATION BAR
+======================= */
+.genre-nav {
+    position: sticky;
+    top: 96px;
+    z-index: 1000;
+
+    width: 100%;
+    background-color: #024b70;
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 0.8rem 0;   /* ✅ vertical only — NO left/right padding */
+    margin: 0;
+}
+
+/* GENRE NAV LINKS */
+.genre-nav a {
+    background: #f0f8ff;
+    color: #0288a6;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.genre-nav a:hover {
+    background-color: #0288a6;
+    color: white;
+}
+
+/* =======================
+   GENRE LABEL
+======================= */
+.genre-label {
+    text-align: center;
+    margin: 2.5rem 0 1rem;
+    background-color: #dfeefc;
+    padding: 1rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.genre-label h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #0288a6;
+}
+
+/* =======================
+   BUCKET LIST CARDS
+======================= */
+/* =======================
+   BUCKET LIST CARDS - SHORTER HEIGHT
+======================= */
+.songs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.song-card {
+    flex: 1 1 300px;   /* increase width from 250px to 300px */
+    max-width: 300px;  /* increase max-width as well */
+    height: auto;      /* keep height based on content */
+    border: 2px solid #0288a6;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 0.8rem;
+    transition: none !important;
+}
+.song-card:hover {
+    transform: none !important;
+}
+
+.song-info {
+    text-align: center;
+}
+
+.song-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.song-info p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+/* =======================
+   BACK TO TOP BUTTON
+======================= */
+.back-top {
+    display: flex;
+    justify-content: center;  /* center horizontally */
+    margin: 3rem 0;
+}
+
+.back-top a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;              /* text is always visible */
+    background-color: #0288a6; /* solid blue background */
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.back-top a:hover {
+    background-color: #03588c; /* darker blue on hover */
+    color: white;              /* text stays visible */
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 1024px) {
+    .songs-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .song-card {
+        width: 90%;
+        max-width: 350px;
+        aspect-ratio: auto; /* allow flexible height on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .header-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-left .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .genre-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 0;   /* ← FIX */
+    }
+
+    .song-info h3 {
+        font-size: 1rem;
+    }
+
+    .song-info p {
+        font-size: 0.85rem;
+    }
+}
