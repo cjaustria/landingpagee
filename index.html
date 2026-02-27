@@ -7,21 +7,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<body id="top">
 <header>
     <div class="header-left">
         <h1>Austria Literature</h1>
         <p class="subtitle">Stories, reflections, and leadership insights.</p>
     </div>
     <nav class="header-right">
-        <a href="#about">Project</a>
-        <a href="#interesting">Profile</a>
-        <a href="bio/bio.html">Bio</a>
-        <a href="#blogs">Blogs</a>
+        <a href="index.html">Home</a>
+        <a href="blogs.html">Blogs</a> 
         <a href="gallery.html">Gallery</a> 
         <a href="media.html">Media</a>
+        <a href="dreamplaces.html">Dream Places</a>
+        <a href="bucketlist.html">Bucket List</a>
     </nav>
 </header>
+
+<!-- GENRE NAV -->
+<nav class="genre-nav">
+    <a href="#about">Project</a>
+    <a href="#interesting">About Me</a>
+    <a href="#blogs">Blogs</a>
+</nav>
 
 <section class="hero">
     <div>
@@ -32,8 +39,8 @@
         </blockquote>
     </div>
     <!-- Make the image clickable, opening in the same window -->
-    <a href="images/intropic.jpg">
-        <img src="images/intropic.jpg" alt="Christian Josef Austria">
+    <a href="images/landing/meintro.jpg" target="_view" title="Christian Austria wearing formal attire">
+        <img src="images/landing/meintro.jpg" alt="Photo 1">
     </a>
 </section>
 
@@ -46,6 +53,38 @@
     </p>
 </section>
 
+<!-- VIDEO INTRO SECTION -->
+<section class="video-hero">
+    <video controls playsinline poster="images/video-poster.jpg">
+        <source src="videos/homeintro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<section class="photo-gallery">
+    <h2>Me at a Glance</h2>
+
+    <div class="gallery-grid">
+    <a href="images/landing/landing1.jpg" target="_view" title="After a workout at the gym, wearing my Superman Drifit attire">
+        <img src="images/landing/landing1.jpg" alt="Photo 1">
+    </a>
+    <a href="images/landing/landing2.jpg" target="_view" title="New Year’s Eve while unwell, wearing a protective mask">
+        <img src="images/landing/landing2.jpg" alt="Photo 2">
+    </a>
+    <a href="images/landing/landing3.jpg" target="_view" title="After finishing at Starbucks, collecting stamps; now with my tumbler">
+        <img src="images/landing/landing3.jpg" alt="Photo 3">
+    </a>
+    <a href="images/landing/landing4.jpg" target="_view" title="Focused studying at school">
+        <img src="images/landing/landing4.jpg" alt="Photo 4">
+    </a>
+    <a href="images/landing/landing5.jpg" target="_view" title="At the gym, flexing and demonstrating strength">
+        <img src="images/landing/landing5.jpg" alt="Photo 5">
+    </a>
+</div>
+
+    <a href="gallery.html" class="gallery-btn">View Full Gallery →</a>
+</section>
+
 <main>
     <section id="about" class="about">
         <h2>About This Project</h2>
@@ -53,61 +92,65 @@
             This website is a 2026 personal academic project that explores leadership,
             emotional intelligence, and career vision in the tech field. The blogs reflect my personal
             experiences, lessons from literature, and insights from fictional and real-life leaders.
-            You can read my full story in my <a href="bio/bio.html">biography</a>.
+            You can read my full story in my 
+            <a href="bio/bio.html" class="button-inline">biography</a>.
         </p>
+
+        <!-- BACK TO TOP BUTTON -->
+        <div class="back-top">
+            <a href="#top">Back to Top ↑</a>
+        </div>
     </section>
 
     <section id="interesting" class="interesting">
-    <h2>Interesting About Me</h2>
-    <div class="interesting-grid">
+        <h2>Interesting About Me</h2>
+        <div class="interesting-grid">
 
-        <div class="interesting-item">
-            <h3>📚 Reader of Philosophy</h3>
-            <p>I enjoy reading philosophical works that challenge how I see life, ethics, and purpose.</p>
+            <div class="interesting-item">
+                <h3>📚 Reader of Philosophy</h3>
+                <p>I enjoy reading philosophical works that challenge how I see life, ethics, and purpose.</p>
+            </div>
+
+            <div class="interesting-item">
+                <h3>💻 Tech-Oriented Thinker</h3>
+                <p>I enjoy problem-solving, debugging, and building systems through logic and structure.</p>
+            </div>
+
+            <div class="interesting-item">
+                <h3>🎓 Tan Yan Kee Scholar</h3>
+                <p>A scholar of the University of the East, driven to honor the opportunity with discipline and consistency.</p>
+            </div>
+
+            <div class="interesting-item">
+                <h3>🤝 Quiet Leadership</h3>
+                <p>I prefer leading through example, empathy, and presence rather than authority.</p>
+            </div>
+
+            <div class="interesting-item">
+                <h3>🌙 Late-Night Thinker</h3>
+                <p>My best ideas and reflections often come during quiet late-night solitude.</p>
+            </div>
+
+            <div class="interesting-item">
+                <h3>🧠 Reflective Learner</h3>
+                <p>I believe self-awareness and reflection are core parts of personal growth.</p>
+            </div>
+
+            
         </div>
 
-        <div class="interesting-item">
-            <h3>💻 Tech-Oriented Thinker</h3>
-            <p>I enjoy problem-solving, debugging, and building systems through logic and structure.</p>
+        <!-- BACK TO TOP BUTTON -->
+        <div class="back-top">
+            <a href="#top">Back to Top ↑</a>
         </div>
-
-        <div class="interesting-item">
-            <h3>🎓 Tan Yan Kee Scholar</h3>
-            <p>A scholar of the University of the East, driven to honor the opportunity with discipline and consistency.</p>
-        </div>
-
-        <div class="interesting-item">
-            <h3>🤝 Quiet Leadership</h3>
-            <p>I prefer leading through example, empathy, and presence rather than authority.</p>
-        </div>
-
-        <div class="interesting-item">
-            <h3>🌙 Late-Night Thinker</h3>
-            <p>My best ideas and reflections often come during quiet late-night solitude.</p>
-        </div>
-
-        <div class="interesting-item">
-            <h3>🧠 Reflective Learner</h3>
-            <p>I believe self-awareness and reflection are core parts of personal growth.</p>
-        </div>
-
-        <!-- NEW Beats Card -->
-        <div class="interesting-item">
-            <h3>🎵 Beats My Beats</h3>
-            <p>Check out my favorite local and foreign tunes with artist info, album covers, and song previews.</p>
-            <a href="beats.html">Go to Beats</a>
-        </div>
-
-    </div>
-</section>
-
+    </section>
 
     <section id="blogs" class="blogs">
         <h2>Featured Blogs</h2>
 
         <div class="blog-card">
             <h3>From Diskarte to Dependency</h3>
-            <p>Leadership, soft skills, and career vision for tech professionals.</p>
+            <p>Exploring how AI impacts our daily lives and the growing dependency on technology.</p>
             <a href="blogs/blog1.html">Read Blog →</a>
         </div>
 
@@ -125,11 +168,16 @@
     </section>
 </main>
 
+
+<!-- BACK TO TOP BUTTON -->
+<div class="back-top">
+    <a href="#top">Back to Top ↑</a>
+</div>
+
 <footer>
     <p>&copy; 2026 Austria Literature</p>
 </footer>
 
+
 </body>
 </html>
-
-
