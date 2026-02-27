@@ -1,355 +1,49 @@
-/* =======================
-   RESET MARGINS AND PADDING
-======================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beats My Beats</title>
+    <link rel="stylesheet" href="style/beats.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-/* =======================
-   BODY
-======================= */
-body {
-    font-family: 'Georgia', serif;
-    overflow-x: hidden;
-}
+<header>
+    <div class="header-left">
+        <h1>My Beats</h1>
+        <p class="subtitle">Select a category to explore my music taste</p>
+    </div>
 
-/* =======================
-   MAIN NAV (HEADER)
-======================= */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    background: linear-gradient(135deg, #d0f0fd, #a0d8f8);
-    color: #04395e;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+    <nav class="header-right">
+        <a href="index.html">Home</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="media.html">Media</a>
+        <a href="dreamplaces.html">Dream Places</a>
+        <a href="bucketlist.html">Bucket List</a>
+    </nav>
+</header>
 
-.header-left h1 {
-    font-family: 'Playfair Display', serif;
-}
+<main>
+    <!-- FULL SCREEN LOCAL / FOREIGN HERO -->
+    <div class="selection-grid">
+        <a href="local.html" class="selection-item">
+            <img src="images/beats/local/local.jpg" alt="Local">
+            <div class="overlay">Local</div>
+        </a>
+        <a href="foreign.html" class="selection-item">
+            <img src="images/beats/foreign/foreign.jpg" alt="Foreign">
+            <div class="overlay">Foreign</div>
+        </a>
+    </div>
 
-.header-left .subtitle {
-    font-style: italic;
-    color: #03588c;
-}
+    <!-- CROSS NAV BUTTONS -->
+    <div class="cross-nav" style="text-align:center; margin:2rem 0;">
+        <a href="movies.html" class="cross-btn">Movies</a>
+        <a href="tv.html" class="cross-btn">TV Shows</a>
+    </div>
+</main>
 
-.header-right a {
-    text-decoration: none;
-    color: #04395e;
-    font-weight: bold;
-    margin-left: 1.5rem;
-}
-
-.header-right a:hover {
-    color: #0288a6;
-}
-
-/* =======================
-   FULL SCREEN HERO SELECTION
-======================= */
-.selection-grid {
-    display: flex;
-    width: 100%;
-    height: calc(100vh - 120px);
-}
-
-.selection-item {
-    flex: 1;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.selection-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-
-.selection-item .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: white;
-    background-color: rgba(0,0,0,0.35);
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-align: center;
-    pointer-events: none;
-}
-
-/* =======================
-   ARTISTS SECTION (LOCAL / FOREIGN)
-======================= */
-.artist-card {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 1.5rem;
-    border: 2px solid #0288a6;
-    border-radius: 12px;
-    background: #d0f0fd;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
-
-.artist-card img.artist-photo {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.artist-info {
-    margin-top: 1rem;
-}
-
-.artist-info h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: #03588c;
-    margin-bottom: 0.3rem;
-}
-
-.artist-info p {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-}
-
-/* SONG CARDS */
-.songs-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.song-card {
-    flex: 1 1 250px;
-    border: 2px solid #0288a6;
-    border-radius: 10px;
-    overflow: hidden;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease;
-}
-
-.song-card:hover {
-    /* no transform to avoid jump */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.song-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.song-info {
-    padding: 0.8rem 1rem;
-    text-align: center;
-    width: 100%;
-}
-
-.song-info h3 {
-    font-family: 'Playfair Display', serif;
-    color: #0288a6;
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-}
-
-.song-info p {
-    font-size: 0.95rem;
-    margin-bottom: 0.3rem;
-}
-
-/* =======================
-   SONG DESCRIPTION
-======================= */
-.song-desc {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #03588c;
-    margin-bottom: 0.5rem;
-}
-
-/* Audio player */
-.song-info audio {
-    width: 100% !important;
-    display: block;
-    height: 45px;
-    margin-top: 10px;
-}
-
-/* =======================
-   GENRE NAVIGATION BAR
-======================= */
-.genre-nav {
-    position: sticky; /* follows scroll */
-    top: 96px;        /* slightly below header (previous 88px) */
-    z-index: 1000;    /* above header layer */
-
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    background-color: #024b70;
-    padding: 0.8rem;
-    margin: 0;
-    width: 100%;
-}
-
-/* GENRE NAV LINKS */
-.genre-nav a {
-    background: #f0f8ff;
-    color: #0288a6;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-weight: bold;
-}
-
-.genre-nav a:hover {
-    background-color: #0288a6;
-    color: white;
-}
-
-/* =======================
-   GENRE LABEL
-======================= */
-.genre-label {
-    text-align: center;
-    margin: 2.5rem 0 1rem;
-    background-color: #dfeefc;
-    padding: 1rem 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.genre-label h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: #0288a6;
-}
-
-/* =======================
-   CROSS NAV BUTTONS (MOVIES / TV SHOWS)
-======================= */
-.cross-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.cross-nav .cross-btn {
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    background-color: #0288a6;
-    padding: 0.7rem 1.4rem;
-    border-radius: 25px;
-    transition: 0.3s ease;
-}
-
-.cross-nav .cross-btn:hover {
-    background-color: #03588c;
-}
-
-/* =======================
-   BACK TO TOP BUTTON
-======================= */
-/* =======================
-   BACK TO TOP BUTTON (STYLE.CSS CONSISTENT)
-======================= */
-.back-top {
-    display: flex;
-    justify-content: center;  /* center the button horizontally */
-    margin: 3rem 0;
-}
-
-.back-top a {
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    background-color: #0288a6;
-    padding: 0.6rem 1.2rem;
-    border-radius: 25px;
-    transition: 0.3s ease;
-}
-
-.back-top a:hover {
-    background-color: #03588c;
-}
-
-/* =======================
-   DISCOVER FOREIGN BUTTON
-======================= */
-.discover-foreign {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3rem 0;
-    text-align: center;
-    gap: 1rem;
-}
-
-.discover-foreign p {
-    font-size: 1.1rem;
-    color: #03588c;
-    font-style: italic;
-}
-
-.discover-foreign .button-foreign {
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    background-color: #0288a6;
-    padding: 0.6rem 1.2rem;
-    border-radius: 25px;
-    transition: 0.3s ease;
-}
-
-.discover-foreign .button-foreign:hover {
-    background-color: #03588c;
-}
-
-/* =======================
-   RESPONSIVE
-======================= */
-@media (max-width: 1024px) {
-    .songs-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .song-card {
-        width: 90%;
-    }
-
-    .genre-nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .selection-item .overlay {
-        font-size: 2rem;
-        padding: 0.5rem 1rem;
-    }
-}
+</body>
+</html>
